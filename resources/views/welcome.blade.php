@@ -7,6 +7,6 @@
     <title>Homepage</title>
 </head>
 <body>
-    <h1><center>INI Homepage</center></h1>
+    <h1><center>INI HOMEPAGE</center></h1>
 </body>
 </html>
