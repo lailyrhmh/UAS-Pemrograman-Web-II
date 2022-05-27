@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AlbumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/album', [AlbumController::class, 'index']);
 
 Route::get('/user', function () {
     return view('template');
