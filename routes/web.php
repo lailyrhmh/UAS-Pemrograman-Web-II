@@ -15,7 +15,15 @@ use App\Http\Controllers\AlbumController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        "title" => "Homepage"
+    ]);
+});
+
+Route::get('/discover', function () {
+    return view('discover', [
+        "title" => "Discover"
+    ]);
 });
 
 Route::get('/album', [AlbumController::class, 'index']);

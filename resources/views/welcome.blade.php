@@ -33,7 +33,7 @@
 <body>
     <div id="wrapper">
         
-	@include('layout.navbar')
+	@include('partials.navbar')
 
         <div id="page-wrapper" class="gray-bg dashbard-1">
         <div class="row border-bottom">
