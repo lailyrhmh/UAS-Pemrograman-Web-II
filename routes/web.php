@@ -23,3 +23,7 @@ Route::get('/album', [AlbumController::class, 'index']);
 Route::get('/user', function () {
     return view('template');
 });
+
+Route::get('/album', function () {
+    return view('album');
+});

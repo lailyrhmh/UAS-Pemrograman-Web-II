@@ -21,7 +21,7 @@
                         </div>
                     </li>
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
+                        <a href="/"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-shopping-cart"></i> <span class="nav-label">E-commerce</span><span class="fa arrow"></span></a>
@@ -36,16 +36,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="ecommerce_product_list.html"><i class="fa fa-shopping-cart"></i> <span class="nav-label">Album</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Products grid</a></li>
-                            <li><a href="ecommerce_product_list.html">Products list</a></li>
-                            <li><a href="ecommerce_product.html">Product edit</a></li>
-                            <li><a href="ecommerce_product_detail.html">Product detail</a></li>
-                            <li><a href="ecommerce-cart.html">Cart</a></li>
-                            <li><a href="ecommerce-orders.html">Orders</a></li>
-                            <li><a href="ecommerce_payments.html">Credit Card form</a></li>
-                        </ul>
+                        <a href="/album"><i class="fa fa-dot-circle-o"></i> <span class="nav-label">Album</span></a>
                     </li>
                 </ul>
 
