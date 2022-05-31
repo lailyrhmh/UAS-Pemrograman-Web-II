@@ -25,7 +25,7 @@
 
     <div id="wrapper">
 
-    @include('layout.navbar')
+    @include('dashboard.layout.navbar')
 
         <div id="page-wrapper" class="gray-bg">
         <div class="row border-bottom">
