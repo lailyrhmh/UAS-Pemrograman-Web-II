@@ -14,17 +14,28 @@ use App\Http\Controllers\AlbumController;
 |
 */
 
+//user
+
 Route::get('/', function () {
     return view('home', [
         "title" => "Homepage"
     ]);
 });
 
-Route::get('/discover', function () {
-    return view('discover', [
-        "title" => "Discover"
-    ]);
+Route::get('/albums', function () {
+    return view('albums');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+
+//admin
 
 Route::get('/album', [AlbumController::class, 'index']);
 
@@ -44,20 +55,15 @@ Route::get('/album', function () {
     ]);
 });
 
-Route::get('/user/album', function () {
-    return view('album');
-});
-
 Route::get('/detail-album', function () {
     return view('detail-album', [
         "title" => "Dashboard"
     ]);
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
 
-Route::get('/register', function () {
-    return view('register');
+//test
+
+Route::get('/test', function () {
+    return view('layouts.main');
 });

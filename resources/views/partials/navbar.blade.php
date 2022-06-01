@@ -1,7 +1,7 @@
 <div class="navbar-wrapper">
         <nav class="navbar navbar-default navbar-fixed-top navbar-expand-md navbar-scroll" role="navigation">
             <div class="container">
-                <a class="navbar-brand" href="index.html">WEBAPPLAYERS</a>
+                <a class="navbar-brand" href="/">WEBAPPLAYERS</a>
                 <div class="navbar-header page-scroll">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                         <i class="fa fa-bars"></i>
@@ -10,8 +10,9 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="nav-link page-scroll" href="/">Home</a></li>
-                        <li><a class="nav-link page-scroll" href="/discover">Discover</a></li>
+                        <li><a class="nav-link page-scroll" href="#albums">Albums</a></li>
                         <li><a class="nav-link page-scroll" href="#contact">Contact</a></li>
+                        <li><a class="nav-link page-scroll" href="/login">LOGIN</a></li>
                     </ul>
                 </div>
             </div>
