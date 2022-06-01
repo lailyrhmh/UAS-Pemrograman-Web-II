@@ -32,8 +32,22 @@ Route::get('/user', function () {
     return view('template');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard', [
+        "title" => "Dashboard"
+    ]);
+});
+
 Route::get('/album', function () {
-    return view('album');
+    return view('list-album', [
+        "title" => "Album"
+    ]);
+});
+
+Route::get('/detail-album', function () {
+    return view('detail-album', [
+        "title" => "Dashboard"
+    ]);
 });
 
 Route::get('/login', function () {
