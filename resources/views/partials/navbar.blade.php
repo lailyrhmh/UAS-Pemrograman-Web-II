@@ -1,5 +1,5 @@
 <div class="navbar-wrapper">
-        <nav class="navbar navbar-default navbar-fixed-top navbar-expand-md" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-expand-md navbar-scroll" role="navigation">
             <div class="container">
                 <a class="navbar-brand" href="index.html">WEBAPPLAYERS</a>
                 <div class="navbar-header page-scroll">
@@ -17,5 +17,3 @@
             </div>
         </nav>
 </div>
-
-@include('layouts.javascript')

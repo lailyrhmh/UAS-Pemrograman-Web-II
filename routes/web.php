@@ -44,6 +44,10 @@ Route::get('/album', function () {
     ]);
 });
 
+Route::get('/user/album', function () {
+    return view('album');
+});
+
 Route::get('/detail-album', function () {
     return view('detail-album', [
         "title" => "Dashboard"
