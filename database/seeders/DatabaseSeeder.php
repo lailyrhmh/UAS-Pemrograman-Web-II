@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Album;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +21,17 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        Album::create([
+            'album_name' => 'Hot Sauce',
+            'slug' => 'album-hot-sauce',
+            'album_desc' => 'NCT DREAM 1st Full Album'
+        ]);
+
+        Album::create([
+            'album_name' => 'Hello Future',
+            'slug' => 'album-hello-future',
+            'album_desc' => 'NCT DREAM 1st Repackage Album'
+        ]);
     }
 }
