@@ -6,7 +6,7 @@
             <div class="row m-b-lg">
                 <div class="col-lg-12 text-center">
                     <div class="navy-line"></div>
-                    <h1>The Albums</h1>
+                    <h1>The Artist: {{ $artist }}</h1>
                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
                 </div>
             </div>

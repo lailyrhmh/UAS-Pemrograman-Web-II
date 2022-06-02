@@ -6,13 +6,13 @@
             <div class="row m-b-lg">
                 <div class="col-lg-12 text-center">
                     <div class="navy-line"></div>
-                    <h1>The Albums</h1>
+                    <h1>The Artists</h1>
                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
                 </div>
             </div>
 
             <div class="row">
-                @foreach ($albums as $album)
+                @foreach ($artists as $artist)
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="ibox-content product-box">
@@ -24,12 +24,14 @@
                                     <span class="product-price">
                                         $10
                                     </span>
-                                    <a href="/albums/{{ $album->slug }}" class="product-name">  {{ $album->album_name  }}</a>
+                                    <!-- <small class="text-muted">{{ $artist->artist_name }}</small> -->
+                                    <a href="/albums/{{ $album->slug }}" class="product-name">  {{ $artist->artist_name  }}</a>
     
     
     
                                     <div class="small m-t-xs">
-                                        <a href="/artists/{{ $album->artist->slug }}" class="text-muted">{{ $album->artist->artist_name }}</a>
+                                        <!-- {{ $album->album_desc }} -->
+                                        Label
                                     </div>
                                     <div class="m-t text-righ">
     

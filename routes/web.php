@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
 use App\Models\Album;
+use App\Models\Artist;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,20 @@ Route::get('/', function () {
 
 Route::get('/albums', [AlbumController::class, 'index']);
 Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
+
+// Route::get('/artists', [ArtistController::class, 'index']);
+Route::get('/artist', function() {
+    return view('artists', [
+        "title" => "Artists"
+    ]);
+});
+Route::get('/artists/{artist:slug}', function(Artist $artist) {
+    return view('artist', [
+        "title" => "Artist",
+        "albums" => $artist->albums,
+        "artist" => $artist->artist_name
+    ]);
+});
 
 Route::get('/login', function () {
     return view('login');
