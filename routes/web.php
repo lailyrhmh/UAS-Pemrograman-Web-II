@@ -61,6 +61,12 @@ Route::get('/detail-album', function () {
     ]);
 });
 
+Route::get('/albumform', function () {
+    return view('albumform', [
+        "title" => "form_album"
+    ]);
+});
+
 
 //test
 
