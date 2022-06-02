@@ -13,6 +13,10 @@
 <!-- slick carousel-->
 <script src="{{ asset('js/plugins/slick/slick.min.js') }}"></script>
 
+<!-- Data picker -->
+<script src="{{ asset('js/plugins/datapicker/bootstrap-datepicker.js') }}"></script>
+
+
 
 <script>
 
@@ -36,6 +40,21 @@
         $('.product-images').slick({
             dots: true
         });
+
+        //datepicker
+
+        var mem = $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+            var yearsAgo = new Date();
+            yearsAgo.setFullYear(yearsAgo.getFullYear() - 20);
+
+            $('#selector').datepicker('setDate', yearsAgo );
     });
 
     var cbpAnimatedHeader = (function() {

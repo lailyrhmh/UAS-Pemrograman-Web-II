@@ -10,3 +10,7 @@
 
     <link href="{{ asset('css/plugins/slick/slick.css') }}" rel="stylesheet">
     <link href="{{ asset('css/plugins/slick/slick-theme.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/plugins/datapicker/datepicker3.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/plugins/daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/plugins/select2/select2.min.css') }}" rel="stylesheet">
