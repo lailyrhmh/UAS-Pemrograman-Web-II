@@ -25,17 +25,16 @@
                                         $10
                                     </span>
                                     <!-- <small class="text-muted">{{ $artist->artist_name }}</small> -->
-                                    <a href="/albums/{{ $album->slug }}" class="product-name">  {{ $artist->artist_name  }}</a>
+                                    <a href="/artists/{{ $artist->slug }}" class="product-name">  {{ $artist->artist_name  }}</a>
     
     
     
                                     <div class="small m-t-xs">
-                                        <!-- {{ $album->album_desc }} -->
                                         Label
                                     </div>
                                     <div class="m-t text-righ">
     
-                                        <a href="/albums/{{ $album->slug }}" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
+                                        <a href="/artists/{{ $artist->slug }}" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
                                     </div>
                                 </div>
                             </div>

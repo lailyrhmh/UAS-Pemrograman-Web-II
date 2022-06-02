@@ -28,9 +28,10 @@ Route::get('/albums', [AlbumController::class, 'index']);
 Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
 
 // Route::get('/artists', [ArtistController::class, 'index']);
-Route::get('/artist', function() {
+Route::get('/artists', function() {
     return view('artists', [
-        "title" => "Artists"
+        "title" => "Artists",
+        "artists" => Artist::all()
     ]);
 });
 Route::get('/artists/{artist:slug}', function(Artist $artist) {
