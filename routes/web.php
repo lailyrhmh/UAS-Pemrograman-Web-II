@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
+use App\Models\Album;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,8 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/albums', function () {
-    return view('albums');
-});
+Route::get('/albums', [AlbumController::class, 'index']);
+Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
 
 Route::get('/login', function () {
     return view('login');
@@ -37,7 +37,7 @@ Route::get('/register', function () {
 
 //admin
 
-Route::get('/album', [AlbumController::class, 'index']);
+// Route::get('/album', [AlbumController::class, 'index']);
 
 Route::get('/user', function () {
     return view('template');

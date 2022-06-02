@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('artist');
+            $table->string('album_name');
+            $table->string('slug')->unique();
+            $table->text('album_desc');
+            $table->string('version')->nullable();
             $table->timestamps();
         });
     }
