@@ -1,10 +1,10 @@
 <?php
 
+use App\Models\Album;
+use App\Models\Staff;
+use App\Models\Talent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
-use App\Models\Album;
-use App\Models\Artist;
-use App\Models\Talent;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +17,6 @@ use App\Models\Talent;
 |
 */
 
-//user
 
 Route::get('/', function () {
     return view('home', [
@@ -129,6 +128,19 @@ Route::get('/detail-trainee', function () {
 Route::get('/form-album', function () {
     return view('dashboard.form-album', [
         "title" => "form_album"
+    ]);
+});
+
+Route::get('/staff', function() {
+    return view('staff', [
+        "title" => "Staffs",
+        //  "staffs" => Staff::all()
+    ]);
+});
+
+Route::get('/talent', function() {
+    return view('talent', [
+        "title" => "Talents"
     ]);
 });
 
