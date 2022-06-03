@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Album;
 use App\Models\Artist;
+use App\Models\Label;
+use App\Models\Talent;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -23,18 +25,30 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Artist::create([
-            'artist_name' => 'NCT DREAM',
+        Talent::create([
+            'label_id' => '2',
+            'talent_name' => 'NCT DREAM',
             'slug' => 'nct-dream'
         ]);
 
-        Artist::create([
-            'artist_name' => 'ENHYPEN',
+        Talent::create([
+            'label_id' => '1',
+            'talent_name' => 'ENHYPEN',
             'slug' => 'enhypen'
         ]);
 
+        Label::create([
+            'label_name' => 'Belift+',
+            'branch' => 'Music',
+        ]);
+
+        Label::create([
+            'label_name' => 'SM Ent',
+            'branch' => 'Music, Actor, Models',
+        ]);
+
         Album::create([
-            'artist_id' => 1,
+            'talent_id' => 1,
             'album_name' => 'Hot Sauce',
             'album_img' => 'hotsauce.jpg',
             'slug' => 'album-hot-sauce',
@@ -42,7 +56,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Album::create([
-            'artist_id' => 1,
+            'talent_id' => 1,
             'album_name' => 'Hello Future',
             'album_img' => 'hotsauce1.jpg',
             'slug' => 'album-hello-future',
@@ -50,7 +64,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Album::create([
-            'artist_id' => 2,
+            'talent_id' => 2,
             'album_name' => 'Border: Day One',
             'album_img' => 'hotsauce2.jpg',
             'slug' => 'album-border-day-one',
