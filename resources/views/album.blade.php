@@ -1,49 +1,48 @@
 @extends('layouts.main')
 
 @section('container')
+
+<section id="albums" class="gray-section team">
 <div class="wrapper wrapper-content animated fadeInRight">
 
-            <div class="row">
-                <div class="col-lg-12">
+    <div class="row">
+        <div class="col-lg-12">
 
-                    <div class="ibox product-detail">
-                        <div class="ibox-content">
+            <div class="ibox product-detail">
+                <div class="ibox-content">
 
-                            <div class="row">
-                                <div class="col-md-5">
-
-
-                                    <div class="product-images">
-
-                                        <div>
-                                            <div class="image-imitation">
-                                                [IMAGE 1]
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="image-imitation">
-                                                [IMAGE 2]
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="image-imitation">
-                                                [IMAGE 3]
-                                            </div>
-                                        </div>
+                    <div class="row">
+                        <div class="col-md-5">
 
 
+                            <div class="product-images">
+
+                                <div>
+                                    <div class="image-imitation">
+                                        [IMAGE 1]
                                     </div>
-
                                 </div>
+                                <div>
+                                    <div class="image-imitation">
+                                        [IMAGE 2]
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="image-imitation">
+                                        [IMAGE 3]
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
                                 <div class="col-md-7">
 
                                     <h2 class="font-bold m-b-xs">
                                     {{ $album->album_name  }}
                                     </h2>
                                     <small>{{ $album->album_desc}}</small>
-                                    <div class="m-t-md">
-                                        <h2 class="product-main-price">$406,602 <small class="text-muted">Exclude Tax</small> </h2>
-                                    </div>
                                     <hr>
 
                                     <h4>Product description</h4>
@@ -58,24 +57,29 @@
                                         have suffered alteration in some form, by injected humour, or randomised words
                                         which don't look even slightly believable.
                                     </div>
-                                    <dl class="small m-t-md">
-                                        <dt>Description lists</dt>
-                                        <dd>A description list is perfect for defining terms.</dd>
-                                        <dt>Euismod</dt>
-                                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-                                        <dt>Malesuada porta</dt>
-                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                    <dl class="large m-t-md">
+                                        <dt>Release Date</dt>
+                                        <dd>dd/mm/yy</dd>
+                                        <dt>Label</dt>
+                                        <dd>Artist Agency</dd>
+                                        <dt>Song List</dt>
+                                        <dd>- 
+                                            -
+                                        </dd>
+                                        <dt>Version</dt>
+                                        <dd>-
+                                            -
+                                        </dd>
+        
                                     </dl>
                                     <hr>
 
                                     <div>
                                         <div class="btn-group">
-                                            <a href="/albums" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus"></i> Back to list album</a>
+                                            <a href="/albums" class="btn btn-outline btn-primary btn-sm"><i class="fa fa-arrow-left"></i> Back to list album</a>
+                                            <a href="/albums" class="btn btn-outline btn-primary btn-sm"><i class="fa fa-cart-plus"></i> Check for shop</a>
                                         </div>
                                     </div>
-
-
 
                                 </div>
                             </div>

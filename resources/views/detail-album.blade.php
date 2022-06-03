@@ -76,7 +76,7 @@
                             <div>
                                 <div class="btn-group">
                                     <a href="/albumform" class="btn btn-l btn-outline btn-primary">Edit</i> </a>
-                                    <a href="/" class="btn btn-l btn-outline btn-primary">Delete</a>   
+                                    <a href="/" class="btn btn-l btn-outline btn-danger">Delete</a>   
                                 </div>
                             </div>
 

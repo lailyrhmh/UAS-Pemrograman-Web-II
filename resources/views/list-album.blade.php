@@ -93,7 +93,7 @@
                             <div class="btn-group">
                                 <a href="/detail-album" class="btn btn-xs btn-outline btn-primary">View</i> </a>
                                 <a href="/albumform" class="btn btn-xs btn-outline btn-primary">Edit</i> </a>
-                                <a href="/" class="btn btn-xs btn-outline btn-primary">Delete</a>   
+                                <a href="/" class="btn btn-xs btn-outline btn-danger">Delete</a>   
                             </div>
                         </td>
                     </tr>
