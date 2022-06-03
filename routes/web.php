@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
 use App\Models\Album;
 use App\Models\Artist;
+// use App\Models\Staff;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,12 +71,6 @@ Route::get('/album', function () {
     ]);
 });
 
-Route::get('/talent', function () {
-    return view('dashboard.list-talent', [
-        "title" => "Talents"
-    ]);
-});
-
 Route::get('/detail-album', function () {
     return view('dashboard.detail-album', [
         "title" => "Dashboard"
@@ -88,7 +83,25 @@ Route::get('/albumform', function () {
     ]);
 });
 
+Route::get('/staff', function() {
+    return view('staff', [
+        "title" => "Staffs",
+        //  "staffs" => Staff::all()
+    ]);
+});
 
+Route::get('/talent', function() {
+    return view('talent', [
+        "title" => "Talents"
+    ]);
+});
+
+// Route::get('/staff/{staff:slug}', function(Staff $staff) {
+//     return view('albums', [
+//         "title" => "The Staff: $staff->staff_name",
+//         // "albums" => $staff->albums,
+//     ]);
+// });
 
 
 //test
