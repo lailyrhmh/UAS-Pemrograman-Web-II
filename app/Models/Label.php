@@ -15,4 +15,14 @@ class Label extends Model
     {
         return $this->hasMany(Talent::class);
     }
+
+    public function trainee()
+    {
+        return $this->hasMany(Trainee::class);
+    }
+    
+    public function staff()
+    {
+        return $this->hasMany(Staff::class);
+    }
 }

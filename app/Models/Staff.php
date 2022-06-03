@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Staff extends Model
 {
     use HasFactory;
+
+    public function label()
+    {
+        return $this->belongsTo(Label::class);
+    }
 }

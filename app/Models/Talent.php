@@ -20,4 +20,9 @@ class Talent extends Model
     {
         return $this->belongsTo(Label::class);
     }
+
+    public function image()
+    {
+        return $this->hasMany(Image::class);
+    }
 }

@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('talent_id');
             $table->string('album_name');
-            $table->string('album_img');
             $table->string('slug')->unique();
             $table->text('album_desc');
             $table->string('version')->nullable();

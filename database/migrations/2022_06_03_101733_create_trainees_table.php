@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('trainees', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('label_id');
+            $table->string('trainee_name');
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }

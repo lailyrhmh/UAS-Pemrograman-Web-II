@@ -4,8 +4,11 @@ namespace Database\Seeders;
 
 use App\Models\Album;
 use App\Models\Artist;
+use App\Models\Image;
 use App\Models\Label;
+use App\Models\Staff;
 use App\Models\Talent;
+use App\Models\Trainee;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -37,6 +40,37 @@ class DatabaseSeeder extends Seeder
             'slug' => 'enhypen'
         ]);
 
+        Trainee::create([
+            'label_id' => '1',
+            'trainee_name' => 'Stefaney',
+            'slug' => 'stefaney'
+        ]);
+
+        
+        Trainee::create([
+            'label_id' => '2',
+            'trainee_name' => 'Hilley',
+            'slug' => 'hilley'
+        ]);
+
+        Staff::create([
+            'label_id' => '2',
+            'staff_name' => 'Milan',
+            'division' => 'CEO'
+        ]);
+
+        Staff::create([
+            'label_id' => '1',
+            'staff_name' => 'Alea',
+            'division' => 'CEO'
+        ]);
+
+        Staff::create([
+            'label_id' => '1',
+            'staff_name' => 'Alea',
+            'division' => 'CO-Director'
+        ]);
+
         Label::create([
             'label_name' => 'Belift+',
             'branch' => 'Music',
@@ -50,7 +84,6 @@ class DatabaseSeeder extends Seeder
         Album::create([
             'talent_id' => 1,
             'album_name' => 'Hot Sauce',
-            'album_img' => 'hotsauce.jpg',
             'slug' => 'album-hot-sauce',
             'album_desc' => 'NCT DREAM 1st Full Album'
         ]);
@@ -58,7 +91,6 @@ class DatabaseSeeder extends Seeder
         Album::create([
             'talent_id' => 1,
             'album_name' => 'Hello Future',
-            'album_img' => 'hotsauce1.jpg',
             'slug' => 'album-hello-future',
             'album_desc' => 'NCT DREAM 1st Repackage Album'
         ]);
@@ -66,9 +98,23 @@ class DatabaseSeeder extends Seeder
         Album::create([
             'talent_id' => 2,
             'album_name' => 'Border: Day One',
-            'album_img' => 'hotsauce2.jpg',
             'slug' => 'album-border-day-one',
             'album_desc' => 'ENHYPEN 1st Mini Album'
+        ]);
+
+        Image::create([
+            'album_id' => 1,
+            'img' => 'hotsauce.jpg',
+        ]);
+
+        Image::create([
+            'album_id' => 2,
+            'img' => 'hotsauce1.jpg',
+        ]);
+
+        Image::create([
+            'album_id' => 1,
+            'img' => 'hotsauce2.jpg',
         ]);
     }
 }
