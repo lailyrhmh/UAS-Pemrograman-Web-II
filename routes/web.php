@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
 use App\Models\Album;
 use App\Models\Artist;
+use App\Models\Talent;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,16 +29,16 @@ Route::get('/albums', [AlbumController::class, 'index']);
 Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
 
 // Route::get('/artists', [ArtistController::class, 'index']);
-Route::get('/artists', function() {
-    return view('artists', [
-        "title" => "Artists",
-        "artists" => Artist::all()
+Route::get('/talents', function() {
+    return view('talents', [
+        "title" => "Talents",
+        "talents" => Talent::all()
     ]);
 });
-Route::get('/artists/{artist:slug}', function(Artist $artist) {
+Route::get('/talents/{talent:slug}', function(Talent $talent) {
     return view('albums', [
-        "title" => "The Artist: $artist->artist_name",
-        "albums" => $artist->albums,
+        "title" => "The Talent: $talent->talent_name",
+        "albums" => $talent->albums,
     ]);
 });
 

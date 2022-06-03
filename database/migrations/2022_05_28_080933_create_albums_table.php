@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('artist_id');
+            $table->foreignId('talent_id');
             $table->string('album_name');
             $table->string('album_img');
             $table->string('slug')->unique();
