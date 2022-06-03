@@ -59,28 +59,30 @@ Route::get('/user', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard', [
+    return view('dashboard.dashboard', [
         "title" => "Dashboard"
     ]);
 });
 
 Route::get('/album', function () {
-    return view('list-album', [
+    return view('dashboard.list-album', [
         "title" => "Album"
     ]);
 });
 
 Route::get('/detail-album', function () {
-    return view('detail-album', [
+    return view('dashboard.detail-album', [
         "title" => "Dashboard"
     ]);
 });
 
 Route::get('/albumform', function () {
-    return view('albumform', [
+    return view('dashboard.albumform', [
         "title" => "form_album"
     ]);
 });
+
+
 
 
 //test
