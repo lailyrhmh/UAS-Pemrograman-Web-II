@@ -17,10 +17,19 @@
                         <a href="/dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
                     </li>
                     <li class="{{ ($title === 'Album') ? 'active' : '' }}">
-                        <a href="/album"><i class="fa fa-dot-circle-o"></i> <span class="nav-label">Album</span></a>
+                        <a href="/listalbum"><i class="fa fa-dot-circle-o"></i> <span class="nav-label">Album</span></a>
                     </li>
                     <li class="{{ ($title === 'Talents') ? 'active' : '' }}">
-                        <a href="/talent"><i class="fa fa-group"></i> <span class="nav-label">Talents</span></a>
+                        <a href="/listtalent"><i class="fa fa-group"></i> <span class="nav-label">Talent</span></a>
+                    </li>
+                    <li class="{{ ($title === 'Staffs') ? 'active' : '' }}">
+                        <a href="/liststaff"><i class="fa fa-vcard-o"></i> <span class="nav-label">Staff</span></a>
+                    </li>
+                    <li class="{{ ($title === 'Labels') ? 'active' : '' }}">
+                        <a href="/listlabel"><i class="fa fa-building"></i> <span class="nav-label">Label</span></a>
+                    </li>
+                    <li class="{{ ($title === 'Trainee') ? 'active' : '' }}">
+                        <a href="/listtrainee"><i class="fa fa-user"></i> <span class="nav-label">Trainee</span></a>
                     </li>
                 </ul>
 

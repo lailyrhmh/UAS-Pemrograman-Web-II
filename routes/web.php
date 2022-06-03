@@ -64,15 +64,34 @@ Route::get('/dashboard', function () {
     ]);
 });
 
-Route::get('/album', function () {
+Route::get('/listalbum', function () {
     return view('dashboard.list-album', [
         "title" => "Album"
     ]);
 });
 
-Route::get('/talent', function () {
+
+Route::get('/listtalent', function () {
     return view('dashboard.list-talent', [
         "title" => "Talents"
+    ]);
+});
+
+Route::get('/liststaff', function () {
+    return view('dashboard.list-staff', [
+        "title" => "Staffs"
+    ]);
+});
+
+Route::get('/listlabel', function () {
+    return view('dashboard.list-label', [
+        "title" => "Labels"
+    ]);
+});
+
+Route::get('/listtrainee', function () {
+    return view('dashboard.list-trainee', [
+        "title" => "Trainee"
     ]);
 });
 
@@ -82,14 +101,59 @@ Route::get('/detail-album', function () {
     ]);
 });
 
-Route::get('/albumform', function () {
-    return view('dashboard.albumform', [
+Route::get('/detail-talent', function () {
+    return view('dashboard.detail-talent', [
+        "title" => "Dashboard"
+    ]);
+});
+
+Route::get('/detail-staff', function () {
+    return view('dashboard.detail-staff', [
+        "title" => "Dashboard"
+    ]);
+});
+
+Route::get('/detail-label', function () {
+    return view('dashboard.detail-label', [
+        "title" => "Dashboard"
+    ]);
+});
+
+Route::get('/detail-trainee', function () {
+    return view('dashboard.detail-trainee', [
+        "title" => "Dashboard"
+    ]);
+});
+
+Route::get('/form-album', function () {
+    return view('dashboard.form-album', [
         "title" => "form_album"
     ]);
 });
 
+Route::get('/form-talent', function () {
+    return view('dashboard.form-talent', [
+        "title" => "form_talent"
+    ]);
+});
 
+Route::get('/form-staff', function () {
+    return view('dashboard.form-staff', [
+        "title" => "form_staff"
+    ]);
+});
 
+Route::get('/form-label', function () {
+    return view('dashboard.form-label', [
+        "title" => "form_label"
+    ]);
+});
+
+Route::get('/form-trainee', function () {
+    return view('dashboard.form-trainee', [
+        "title" => "form_trainee"
+    ]);
+});
 
 //test
 

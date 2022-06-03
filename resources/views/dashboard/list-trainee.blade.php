@@ -5,7 +5,7 @@
     <div class="ibox-content m-b-sm border-bottom">
         <div class="row">
             <div class="col-sm-4">
-                <button type="button" class="btn btn-w-m btn-primary">Add Talent</button>
+                <button type="button" class="btn btn-w-m btn-primary">Add Trainee</button>
         </div>
     </div>
 
@@ -19,18 +19,18 @@
                     </div>
                 </div>
                 <div class="col-8">
-                    <h3><strong>ENHYPEN</strong></h3>
+                    <h3><strong>James Wang</strong></h3>
                     <p><i class="fa fa-building"></i> BE:LIFT LAB</p>
                     <address>
-                        <strong>Debut Date</strong><br>
+                        <strong>Trainee Date</strong><br>
                         30 November 2020 <br>
                     </address>
     
                 </div>
                 <td class="text-left">
                     <div class="btn-group col-4">
-                        <a href="/detail-talent" class="btn btn-xs btn-outline btn-primary">View</i> </a>
-                        <a href="/form-talent" class="btn btn-xs btn-outline btn-primary">Edit</i> </a>
+                        <a href="/detail-trainee" class="btn btn-xs btn-outline btn-primary">View</i> </a>
+                        <a href="/form-trainee" class="btn btn-xs btn-outline btn-primary">Edit</i> </a>
                         <a href="/" class="btn btn-xs btn-outline btn-danger">Delete</a>   
                     </div>
                 </td>

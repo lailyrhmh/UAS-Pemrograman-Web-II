@@ -8,7 +8,7 @@
     <div class="ibox-content m-b-sm border-bottom">
         <div class="row">
             <div class="col-sm-4">
-                <button type="button" class="btn btn-w-m btn-primary">Add Album</button>
+                <button type="button" class="btn btn-w-m btn-primary">Add Label</button>
         </div>
     </div>
 
@@ -21,12 +21,12 @@
                     <thead>
                     <tr>
 
-                        <th>Album ID</th>
-                        <th data-hide="phone">Album Name</th>
-                        <th data-hide="phone">Artist</th>
-                        <th data-hide="phone">Agency</th>
-                        <th data-hide="phone">Release Date</th>
-                        <th data-hide="phone">Total Version</th>
+                        <th>Label ID</th>
+                        <th data-hide="phone">Label Name</th>
+                        <th data-hide="phone">Branch</th>
+                        <th data-hide="phone">Total Staffs</th>
+                        <th data-hide="phone">Total Talents</th>
+                        <th data-hide="phone">Established Date</th>
                         <th></th>
                         <th class="text-right"> Action</th>
 
@@ -38,27 +38,28 @@
                            1001
                         </td>
                         <td>
-                            Border: Day One
+                            BELIFT LAB
                         </td>
                         <td>
-                            ENHYPEN
+                            Music
                         </td>
                         <td>
-                            Belift Lab
+                            2
+                        </td>
+                        <td>
+                            1
                         </td>
                         <td>
                             30/11/2020
                         </td>
-                        <td>
-                            Mini Album
-                        </td>
+
                         <td>
                             
                         </td>
                         <td class="text-right">
                             <div class="btn-group">
-                                <a href="/detail-album" class="btn btn-xs btn-outline btn-primary">View</i> </a>
-                                <a href="/form-album" class="btn btn-xs btn-outline btn-primary">Edit</i> </a>
+                                <a href="/detail-label" class="btn btn-xs btn-outline btn-primary">View</i> </a>
+                                <a href="/form-label" class="btn btn-xs btn-outline btn-primary">Edit</i> </a>
                                 <a href="/" class="btn btn-xs btn-outline btn-danger">Delete</a>   
                             </div>
                         </td>
