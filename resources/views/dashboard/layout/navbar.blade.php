@@ -19,6 +19,9 @@
                     <li class="{{ ($title === 'Album') ? 'active' : '' }}">
                         <a href="/album"><i class="fa fa-dot-circle-o"></i> <span class="nav-label">Album</span></a>
                     </li>
+                    <li class="{{ ($title === 'Talents') ? 'active' : '' }}">
+                        <a href="/talent"><i class="fa fa-group"></i> <span class="nav-label">Talents</span></a>
+                    </li>
                 </ul>
 
             </div>

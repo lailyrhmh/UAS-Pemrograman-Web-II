@@ -70,6 +70,12 @@ Route::get('/album', function () {
     ]);
 });
 
+Route::get('/talent', function () {
+    return view('dashboard.list-talent', [
+        "title" => "Talents"
+    ]);
+});
+
 Route::get('/detail-album', function () {
     return view('dashboard.detail-album', [
         "title" => "Dashboard"
