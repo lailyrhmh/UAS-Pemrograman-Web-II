@@ -11,7 +11,7 @@ class AlbumController extends Controller
     public function index()
     {
         return view('albums', [
-            "title" => "Albums",
+            "title" => "The Albums",
             "albums" => Album::all()
         ]);
 

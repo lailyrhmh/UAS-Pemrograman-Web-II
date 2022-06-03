@@ -35,10 +35,9 @@ Route::get('/artists', function() {
     ]);
 });
 Route::get('/artists/{artist:slug}', function(Artist $artist) {
-    return view('artist', [
-        "title" => "Artist",
+    return view('albums', [
+        "title" => "The Artist: $artist->artist_name",
         "albums" => $artist->albums,
-        "artist" => $artist->artist_name
     ]);
 });
 

@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
         Album::create([
             'artist_id' => 1,
             'album_name' => 'Hot Sauce',
+            'album_img' => 'hotsauce.jpg',
             'slug' => 'album-hot-sauce',
             'album_desc' => 'NCT DREAM 1st Full Album'
         ]);
@@ -43,6 +44,7 @@ class DatabaseSeeder extends Seeder
         Album::create([
             'artist_id' => 1,
             'album_name' => 'Hello Future',
+            'album_img' => 'hotsauce1.jpg',
             'slug' => 'album-hello-future',
             'album_desc' => 'NCT DREAM 1st Repackage Album'
         ]);
@@ -50,6 +52,7 @@ class DatabaseSeeder extends Seeder
         Album::create([
             'artist_id' => 2,
             'album_name' => 'Border: Day One',
+            'album_img' => 'hotsauce2.jpg',
             'slug' => 'album-border-day-one',
             'album_desc' => 'ENHYPEN 1st Mini Album'
         ]);
