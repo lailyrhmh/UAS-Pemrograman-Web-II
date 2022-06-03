@@ -6,7 +6,7 @@
             <div class="row m-b-lg">
                 <div class="col-lg-12 text-center">
                     <div class="navy-line"></div>
-                    <h1>The Albums</h1>
+                    <h1>{{ $title }}</h1>
                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
                 </div>
             </div>
@@ -18,7 +18,15 @@
                             <div class="ibox-content product-box">
     
                                 <div class="product-imitation">
-                                    [ INFO ]
+                                    <div class="image">
+                                        <img src="img/{{ $album->album_img }}" alt="" class="img-responsive" style="width: auto; height: 195px;">
+                                    </div>
+                                    <!-- <a href="#">
+                                        
+                                    </a> -->
+                                    <!-- <div class="image">
+                                        
+                                    </div> -->
                                 </div>
                                 <div class="product-desc">
                                     <span class="product-price">
