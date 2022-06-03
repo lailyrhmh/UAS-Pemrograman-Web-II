@@ -1,14 +1,10 @@
 <?php
 
+use App\Models\Album;
+use App\Models\Staff;
+use App\Models\Talent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
-use App\Models\Album;
-use App\Models\Artist;
-<<<<<<< HEAD
-// use App\Models\Staff;
-=======
-use App\Models\Talent;
->>>>>>> f2d0f095c23db65d0e2321fe4911a4fc8fb7bb8f
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +17,6 @@ use App\Models\Talent;
 |
 */
 
-//user
 
 Route::get('/', function () {
     return view('home', [
@@ -75,8 +70,6 @@ Route::get('/listalbum', function () {
     ]);
 });
 
-<<<<<<< HEAD
-=======
 
 Route::get('/listtalent', function () {
     return view('dashboard.list-talent', [
@@ -102,7 +95,6 @@ Route::get('/listtrainee', function () {
     ]);
 });
 
->>>>>>> f2d0f095c23db65d0e2321fe4911a4fc8fb7bb8f
 Route::get('/detail-album', function () {
     return view('dashboard.detail-album', [
         "title" => "Dashboard"
@@ -139,7 +131,6 @@ Route::get('/form-album', function () {
     ]);
 });
 
-<<<<<<< HEAD
 Route::get('/staff', function() {
     return view('staff', [
         "title" => "Staffs",
@@ -153,13 +144,6 @@ Route::get('/talent', function() {
     ]);
 });
 
-// Route::get('/staff/{staff:slug}', function(Staff $staff) {
-//     return view('albums', [
-//         "title" => "The Staff: $staff->staff_name",
-//         // "albums" => $staff->albums,
-//     ]);
-// });
-=======
 Route::get('/form-talent', function () {
     return view('dashboard.form-talent', [
         "title" => "form_talent"
@@ -177,7 +161,6 @@ Route::get('/form-label', function () {
         "title" => "form_label"
     ]);
 });
->>>>>>> f2d0f095c23db65d0e2321fe4911a4fc8fb7bb8f
 
 Route::get('/form-trainee', function () {
     return view('dashboard.form-trainee', [
