@@ -4,7 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
 use App\Models\Album;
 use App\Models\Artist;
+<<<<<<< HEAD
+// use App\Models\Staff;
+=======
 use App\Models\Talent;
+>>>>>>> f2d0f095c23db65d0e2321fe4911a4fc8fb7bb8f
 
 /*
 |--------------------------------------------------------------------------
@@ -65,32 +69,121 @@ Route::get('/dashboard', function () {
     ]);
 });
 
-Route::get('/album', function () {
+Route::get('/listalbum', function () {
     return view('dashboard.list-album', [
         "title" => "Album"
     ]);
 });
 
-Route::get('/talent', function () {
+<<<<<<< HEAD
+=======
+
+Route::get('/listtalent', function () {
     return view('dashboard.list-talent', [
         "title" => "Talents"
     ]);
 });
 
+Route::get('/liststaff', function () {
+    return view('dashboard.list-staff', [
+        "title" => "Staffs"
+    ]);
+});
+
+Route::get('/listlabel', function () {
+    return view('dashboard.list-label', [
+        "title" => "Labels"
+    ]);
+});
+
+Route::get('/listtrainee', function () {
+    return view('dashboard.list-trainee', [
+        "title" => "Trainee"
+    ]);
+});
+
+>>>>>>> f2d0f095c23db65d0e2321fe4911a4fc8fb7bb8f
 Route::get('/detail-album', function () {
     return view('dashboard.detail-album', [
         "title" => "Dashboard"
     ]);
 });
 
-Route::get('/albumform', function () {
-    return view('dashboard.albumform', [
+Route::get('/detail-talent', function () {
+    return view('dashboard.detail-talent', [
+        "title" => "Dashboard"
+    ]);
+});
+
+Route::get('/detail-staff', function () {
+    return view('dashboard.detail-staff', [
+        "title" => "Dashboard"
+    ]);
+});
+
+Route::get('/detail-label', function () {
+    return view('dashboard.detail-label', [
+        "title" => "Dashboard"
+    ]);
+});
+
+Route::get('/detail-trainee', function () {
+    return view('dashboard.detail-trainee', [
+        "title" => "Dashboard"
+    ]);
+});
+
+Route::get('/form-album', function () {
+    return view('dashboard.form-album', [
         "title" => "form_album"
     ]);
 });
 
+<<<<<<< HEAD
+Route::get('/staff', function() {
+    return view('staff', [
+        "title" => "Staffs",
+        //  "staffs" => Staff::all()
+    ]);
+});
 
+Route::get('/talent', function() {
+    return view('talent', [
+        "title" => "Talents"
+    ]);
+});
 
+// Route::get('/staff/{staff:slug}', function(Staff $staff) {
+//     return view('albums', [
+//         "title" => "The Staff: $staff->staff_name",
+//         // "albums" => $staff->albums,
+//     ]);
+// });
+=======
+Route::get('/form-talent', function () {
+    return view('dashboard.form-talent', [
+        "title" => "form_talent"
+    ]);
+});
+
+Route::get('/form-staff', function () {
+    return view('dashboard.form-staff', [
+        "title" => "form_staff"
+    ]);
+});
+
+Route::get('/form-label', function () {
+    return view('dashboard.form-label', [
+        "title" => "form_label"
+    ]);
+});
+>>>>>>> f2d0f095c23db65d0e2321fe4911a4fc8fb7bb8f
+
+Route::get('/form-trainee', function () {
+    return view('dashboard.form-trainee', [
+        "title" => "form_trainee"
+    ]);
+});
 
 //test
 

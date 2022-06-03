@@ -14,3 +14,5 @@
     <link href="{{ asset('css/plugins/datapicker/datepicker3.css') }}" rel="stylesheet">
     <link href="{{ asset('css/plugins/daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet">
     <link href="{{ asset('css/plugins/select2/select2.min.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/plugins/summernote/summernote-bs4.css')}}" rel="stylesheet">

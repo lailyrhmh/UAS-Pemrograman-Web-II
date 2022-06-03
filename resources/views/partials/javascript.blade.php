@@ -16,6 +16,9 @@
 <!-- Data picker -->
 <script src="{{ asset('js/plugins/datapicker/bootstrap-datepicker.js') }}"></script>
 
+<!-- SUMMERNOTE -->
+<script src="{{ asset('js/plugins/summernote/summernote-bs4.js') }}"></script>
+
 
 
 <script>
@@ -55,6 +58,17 @@
             yearsAgo.setFullYear(yearsAgo.getFullYear() - 20);
 
             $('#selector').datepicker('setDate', yearsAgo );
+
+
+            $('.summernote').summernote();
+
+        $('.input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
+        });
     });
 
     var cbpAnimatedHeader = (function() {
