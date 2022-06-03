@@ -37,7 +37,7 @@
     
     
                                     <div class="small m-t-xs">
-                                        <a href="/artists/{{ $album->artist->slug }}" class="text-muted">{{ $album->artist->artist_name }}</a>
+                                        <a href="/talents/{{ $album->talent->slug }}" class="text-muted">{{ $album->talent->talent_name }}</a>
                                     </div>
                                     <div class="m-t text-righ">
     

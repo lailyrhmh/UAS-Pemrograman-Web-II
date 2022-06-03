@@ -39,12 +39,12 @@
                         <div class="col-md-7">
 
                             <h1 class="font-bold m-b-xs">
-                                ALBUM TITLE
+                                LABEL NAME
                             </h1>
-                            <h3>ARTIST NAME</h3>
+                            <h3>LABEL BRANCH</h3>
                             <hr>
 
-                            <h4>Album Description</h4>
+                            <h4>Label Description</h4>
 
                             <div class="medium text-muted">
                                 It is a long established fact that a reader will be distracted by the readable
@@ -57,19 +57,8 @@
                                 which don't look even slightly believable.
                             </div>
                             <dl class="large m-t-md">
-                                <dt>Release Date</dt>
+                                <dt>Established Date</dt>
                                 <dd>dd/mm/yy</dd>
-                                <dt>Label</dt>
-                                <dd>Artist Agency</dd>
-                                <dt>Song List</dt>
-                                <dd>- 
-                                    -
-                                </dd>
-                                <dt>Version</dt>
-                                <dd>-
-                                    -
-                                </dd>
-
                             </dl>
                             <hr>
 

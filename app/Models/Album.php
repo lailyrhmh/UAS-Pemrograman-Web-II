@@ -11,8 +11,8 @@ class Album extends Model
 
     protected $guarded = ['id'];
 
-    public function artist()
+    public function talent()
     {
-        return $this->belongsTo(Artist::class);
+        return $this->belongsTo(Talent::class);
     }
 }
