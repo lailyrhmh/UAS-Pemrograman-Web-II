@@ -61,42 +61,4 @@
 
             </div>
         </div>
-        <div id="tab-2" class="tab-pane">
-            <div class="panel-body">
-
-                <fieldset>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">ID:</label>
-                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="543"></div>
-                    </div>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">Model:</label>
-                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="..."></div>
-                    </div>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">Location:</label>
-                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="location"></div>
-                    </div>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">Tax Class:</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" >
-                                <option>option 1</option>
-                                <option>option 2</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">Quantity:</label>
-                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Quantity"></div>
-                    </div>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">Minimum quantity:</label>
-                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="2"></div>
-                    </div>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">Sort order:</label>
-                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="0"></div>
-                    </div>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">Status:</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" >
-                                <option>option 1</option>
-                                <option>option 2</option>
-                            </select>
-                        </div>
-                    </div>
 @endsection
