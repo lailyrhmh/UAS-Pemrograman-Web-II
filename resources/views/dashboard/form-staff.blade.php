@@ -17,19 +17,6 @@
                     <div class="form-group row"><label class="col-sm-2 col-form-label">Staff Name :</label>
                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input Staff Name"></div>
                     </div>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">Description:</label>
-                        <div class="col-sm-10">
-                            <div class="summernote">
-                                <h3>Lorem Ipsum is simply</h3>
-                                dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                                <br/>
-
-                            </div>
-                        </div>
-                    </div>
                     <div class="form-group row"><label class="col-sm-2 col-form-label">Staff Division    :</label>
                         <div class="col-sm-10"><input type="text" class="form-control" placeholder="Art Division"></div>
                     </div>

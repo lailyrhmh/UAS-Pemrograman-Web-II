@@ -6,7 +6,7 @@
                             <img alt="image" class="rounded-circle" src="img/profile_small.jpg"/>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="block m-t-xs font-bold">Jake Sim</span>
-                                <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+                                <span class="text-muted text-xs block">Admin <b class="caret"></b></span>
                             </a>
                         </div>
                         <div class="logo-element">
