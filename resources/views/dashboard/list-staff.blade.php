@@ -5,7 +5,7 @@
     <div class="ibox-content m-b-sm border-bottom">
         <div class="row">
             <div class="col-sm-4">
-                <button type="button" class="btn btn-w-m btn-primary">Add Talent</button>
+                <button type="button" class="btn btn-w-m btn-primary">Add Staff</button>
         </div>
     </div>
     <div class="row">
