@@ -19,17 +19,23 @@
 
                                 <div>
                                     <div class="image-imitation">
-                                        [IMAGE 1]
+                                        <div class="image">
+                                            <img src="{{ asset('img/hotsauce.jpg') }}" alt="" class="img-responsive" style="width: auto; height: 195px;">
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="image-imitation">
-                                        [IMAGE 2]
+                                        <div class="image">
+                                            <img src="{{ asset('img/hotsauce1.jpg') }}" alt="" class="img-responsive" style="width: auto; height: 195px;">
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="image-imitation">
-                                        [IMAGE 3]
+                                        <div class="image">
+                                            <img src="{{ asset('img/hotsauce2.jpg') }}" alt="" class="img-responsive" style="width: auto; height: 195px;">
+                                        </div>
                                     </div>
                                 </div>
 
