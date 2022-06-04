@@ -5,6 +5,10 @@ use App\Models\Staff;
 use App\Models\Talent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +31,12 @@ Route::get('/', function () {
 Route::get('/albums', [AlbumController::class, 'index']);
 Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
 
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/albums', [LoginController::class, 'authenticate']);
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
+
+
 // Route::get('/artists', [ArtistController::class, 'index']);
 Route::get('/talents', function() {
     return view('talents', [
@@ -42,11 +52,11 @@ Route::get('/talents/{talent:slug}', function(Talent $talent) {
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('login.login');
 });
 
 Route::get('/register', function () {
-    return view('register');
+    return view('register.register');
 });
 
 
