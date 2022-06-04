@@ -9,6 +9,7 @@ use App\Models\Label;
 use App\Models\Staff;
 use App\Models\Talent;
 use App\Models\Trainee;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -27,6 +28,12 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        User::create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' => encrypt('ayangneysa')
+        ]);
 
         Talent::create([
             'label_id' => '2',
