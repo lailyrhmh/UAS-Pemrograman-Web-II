@@ -22,6 +22,11 @@
 <!-- iCheck -->
 <script src="{{ asset('js/plugins/iCheck/icheck.min.js') }}"></script>
 
+<!-- Custom and plugin javascript -->
+<script src="{{ asset('js/inspinia.j') }}"></script>
+<script src="{{ asset('js/plugins/pace/pace.min.js') }}"></script>
+
+
 
 <script>
 

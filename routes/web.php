@@ -31,10 +31,14 @@ Route::get('/', function () {
 Route::get('/albums', [AlbumController::class, 'index']);
 Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
 
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/albums', [LoginController::class, 'authenticate']);
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/register', [DashboardController::class, 'index'])->middleware('auth');
 
 
 // Route::get('/artists', [ArtistController::class, 'index']);
@@ -52,6 +56,10 @@ Route::get('/talents/{talent:slug}', function(Talent $talent) {
 });
 
 Route::get('/login', function () {
+    return view('login.login');
+});
+
+Route::get('/logout', function () {
     return view('login.login');
 });
 

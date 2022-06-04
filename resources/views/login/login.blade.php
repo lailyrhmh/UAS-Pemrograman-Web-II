@@ -1,4 +1,5 @@
 
+@include('partials.css')
 <!DOCTYPE html>
 <html>
 
@@ -9,18 +10,27 @@
 
     <title>GOODIES | Login</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
 </head>
+<div class="ibox-content">
+    @if(session()->has('success'))
+    <div class="alert alert-success alert-dismissable">
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+        {{ session('success') }} <a class="alert-link" href="#">Please Login</a>.
+    </div>
+    @endif
+
+    <div class="ibox-content">
+        @if(session()->has('loginError'))
+        <div class="alert alert-danger alert-dismissable">
+            <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+            {{ session('loginError') }} <a class="alert-link" href="#"></a>.
+        </div>
+        @endif
 
 <body class="gray-bg">
-
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div>
+
             <div>
 
                 <h1 class="logo-name">GD+</h1>
@@ -31,10 +41,10 @@
                 <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
             </p>
             <p>Login in. To see it in action.</p>
-            <form class="m-t" role="form" action="/dashboard" method="POST">
+            <form class="m-t" role="form" action="/login" method="POST">
                 @csrf
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control @error("email") is invalid @enderror" placeholder="Email" required="" id="email" autofocus>
+                    <input type="email" name="email" class="form-control @error("email") is invalid @enderror" placeholder="email@example.com" id="email" autofocus required value="{{ old ('email')}}">
                 </div>
                 @error('email')
                 <div class="invalid-feedback">
@@ -44,6 +54,11 @@
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="Password" required="">
                 </div>
+                @error('password')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                 <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
                 <a href="#"><small>Forgot password?</small></a>
