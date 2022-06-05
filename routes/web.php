@@ -37,6 +37,16 @@ Route::get('/', function () {
 Route::get('/albums', [AlbumController::class, 'indexClient']);
 Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
 
+// Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('auth');
+// Route::get('/dashboard', [LoginController::class, 'index'])->name('login')->middleware('auth');
+// Route::get('/dashboard', [LoginController::class, 'index']);
+// Route::post('/login', [LoginController::class, 'authenticate']);
+// Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+Route::get('/dashboard', [LoginController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
 
 // Album Admin
 Route::resource('album', AlbumController::class);
