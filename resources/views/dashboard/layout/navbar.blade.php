@@ -12,7 +12,7 @@
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
                                 <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" method="post">Logout</a></li>
+                                <li><a class="dropdown-item" method="post" href="{{route('actionlogout')}}">Logout</a></li>
                             </ul>
                             @endauth
                         </div>

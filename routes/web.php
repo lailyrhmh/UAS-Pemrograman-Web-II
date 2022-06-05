@@ -31,9 +31,16 @@ Route::get('/', function () {
 Route::get('/albums', [AlbumController::class, 'index']);
 Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
 
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+// Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('auth');
+// Route::get('/dashboard', [LoginController::class, 'index'])->name('login')->middleware('auth');
+// Route::get('/dashboard', [LoginController::class, 'index']);
+// Route::post('/login', [LoginController::class, 'authenticate']);
+// Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+Route::get('/dashboard', [LoginController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
@@ -42,26 +49,26 @@ Route::get('/register', [DashboardController::class, 'index'])->middleware('auth
 
 
 // Route::get('/artists', [ArtistController::class, 'index']);
-Route::get('/talents', function() {
+Route::get('/talents', function () {
     return view('talents', [
         "title" => "Talents",
         "talents" => Talent::all()
     ]);
 });
-Route::get('/talents/{talent:slug}', function(Talent $talent) {
+Route::get('/talents/{talent:slug}', function (Talent $talent) {
     return view('albums', [
         "title" => "The Talent: $talent->talent_name",
         "albums" => $talent->albums,
     ]);
 });
 
-Route::get('/login', function () {
-    return view('login.login');
-});
+// Route::get('/login', function () {
+//     return view('login.login');
+// });
 
-Route::get('/logout', function () {
-    return view('login.login');
-});
+// Route::get('/logout', function () {
+//     return view('login.login');
+// });
 
 Route::get('/register', function () {
     return view('register.register');
@@ -76,11 +83,11 @@ Route::get('/user', function () {
     return view('template');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.dashboard', [
-        "title" => "Dashboard"
-    ]);
-});
+// Route::get('/dashboard', function () {
+//     return view('dashboard.dashboard', [
+//         "title" => "Dashboard"
+//     ]);
+// });
 
 Route::get('/listalbum', function () {
     return view('dashboard.list-album', [
@@ -149,14 +156,14 @@ Route::get('/form-album', function () {
     ]);
 });
 
-Route::get('/staff', function() {
+Route::get('/staff', function () {
     return view('staff', [
         "title" => "Staffs",
         //  "staffs" => Staff::all()
     ]);
 });
 
-Route::get('/talent', function() {
+Route::get('/talent', function () {
     return view('talent', [
         "title" => "Talents"
     ]);
