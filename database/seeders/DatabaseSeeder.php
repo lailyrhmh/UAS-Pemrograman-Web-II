@@ -9,6 +9,7 @@ use App\Models\Label;
 use App\Models\Staff;
 use App\Models\Talent;
 use App\Models\Trainee;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -27,6 +28,18 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        User::create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' => encrypt('ayangneysa')
+        ]);
+        
+        User::create([
+            'name' => 'Neysa Nisrina',
+            'email' => 'neysa.nisrina@gmail.com',
+            'password' => encrypt('12345')
+        ]);
 
         Talent::create([
             'label_id' => '2',
@@ -82,25 +95,26 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Album::create([
-            'talent_id' => 1,
-            'album_name' => 'Hot Sauce',
+            'id' => 1,
+            'title' => 'Hot Sauce',
+            'artist' => 'Sauce',
             'slug' => 'album-hot-sauce',
-            'album_desc' => 'NCT DREAM 1st Full Album'
+            'description' => 'NCT DREAM 1st Full Album'
         ]);
 
-        Album::create([
-            'talent_id' => 1,
-            'album_name' => 'Hello Future',
-            'slug' => 'album-hello-future',
-            'album_desc' => 'NCT DREAM 1st Repackage Album'
-        ]);
+        // Album::create([
+        //     'talent_id' => 1,
+        //     'album_name' => 'Hello Future',
+        //     'slug' => 'album-hello-future',
+        //     'album_desc' => 'NCT DREAM 1st Repackage Album'
+        // ]);
 
-        Album::create([
-            'talent_id' => 2,
-            'album_name' => 'Border: Day One',
-            'slug' => 'album-border-day-one',
-            'album_desc' => 'ENHYPEN 1st Mini Album'
-        ]);
+        // Album::create([
+        //     'talent_id' => 2,
+        //     'album_name' => 'Border: Day One',
+        //     'slug' => 'album-border-day-one',
+        //     'album_desc' => 'ENHYPEN 1st Mini Album'
+        // ]);
 
         Image::create([
             'album_id' => 1,

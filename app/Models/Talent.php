@@ -11,9 +11,13 @@ class Talent extends Model
     
     protected $guarded = ['id'];
 
-    public function albums()
+    protected $fillable = [
+        'label_id', 'talent_name','slug'
+    ];
+
+    public function talents()
     {
-        return $this->hasMany(Album::class);
+        return $this->hasMany(Talent::class);
     }
 
     public function label()

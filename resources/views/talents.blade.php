@@ -12,7 +12,7 @@
             </div>
 
             <div class="row">
-                @foreach ($talents as $talent)
+                @foreach ($talentss as $talent)
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="ibox-content product-box">
@@ -29,7 +29,7 @@
     
     
                                     <div class="small m-t-xs">
-                                        {{ $talent->label->label_name }}
+                                        {{ $talent->label_id }}
                                     </div>
                                     <div class="m-t text-righ">
     

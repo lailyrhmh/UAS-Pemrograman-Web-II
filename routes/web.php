@@ -5,6 +5,11 @@ use App\Models\Staff;
 use App\Models\Talent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\TalentController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,58 +29,51 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/albums', [AlbumController::class, 'index']);
+//Album
+// Route::get('/albums', function () {
+//     return view('album', [
+//         "title" => "Album"
+//     ]);
+// });
+Route::get('/albums', [AlbumController::class, 'indexClient']);
 Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
 
-// Route::get('/artists', [ArtistController::class, 'index']);
-Route::get('/talents', function() {
-    return view('talents', [
-        "title" => "Talents",
-        "talents" => Talent::all()
-    ]);
-});
-Route::get('/talents/{talent:slug}', function(Talent $talent) {
-    return view('albums', [
-        "title" => "The Talent: $talent->talent_name",
-        "albums" => $talent->albums,
-    ]);
-});
 
-Route::get('/login', function () {
-    return view('login');
-});
+// Album Admin
+Route::resource('album', AlbumController::class);
 
+
+// Login Logout Register
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+Route::get('/dashboard', [LoginController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/register', [DashboardController::class, 'index'])->middleware('auth');
 Route::get('/register', function () {
-    return view('register');
+    return view('register.register');
 });
+
+// Talent Client
+Route::get('/talents', [TalentController::class, 'indexClient']);
+Route::get('/talents/{talent:slug}', [TalentController::class, 'show']);
+
+// Talent Admin
+Route::resource('talent', TalentController::class);
+
+
+
 
 
 //admin
 
-// Route::get('/album', [AlbumController::class, 'index']);
+// 
 
 Route::get('/user', function () {
     return view('template');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.dashboard', [
-        "title" => "Dashboard"
-    ]);
-});
-
-Route::get('/listalbum', function () {
-    return view('dashboard.list-album', [
-        "title" => "Album"
-    ]);
-});
-
-
-Route::get('/listtalent', function () {
-    return view('dashboard.list-talent', [
-        "title" => "Talents"
-    ]);
-});
 
 Route::get('/liststaff', function () {
     return view('dashboard.list-staff', [
@@ -131,24 +129,24 @@ Route::get('/form-album', function () {
     ]);
 });
 
-Route::get('/staff', function() {
+Route::get('/staff', function () {
     return view('staff', [
         "title" => "Staffs",
         //  "staffs" => Staff::all()
     ]);
 });
 
-Route::get('/talent', function() {
-    return view('talent', [
-        "title" => "Talents"
-    ]);
-});
+// Route::get('/talent', function () {
+//     return view('talent', [
+//         "title" => "Talents"
+//     ]);
+// });
 
-Route::get('/form-talent', function () {
-    return view('dashboard.form-talent', [
-        "title" => "form_talent"
-    ]);
-});
+// Route::get('/form-talent', function () {
+//     return view('dashboard.form-talent', [
+//         "title" => "form_talent"
+//     ]);
+// });
 
 Route::get('/form-staff', function () {
     return view('dashboard.form-staff', [
