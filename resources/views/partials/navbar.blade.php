@@ -12,7 +12,7 @@
                         <li><a class="nav-link page-scroll" href="/">Home</a></li>
                         <li><a class="nav-link page-scroll" href="/albums">Albums</a></li>
                         <li><a class="nav-link page-scroll" href="/staff">Staff</a></li>
-                        <li><a class="nav-link page-scroll" href="/talent">Talent</a></li>
+                        <li><a class="nav-link page-scroll" href="/talents">Talent</a></li>
                         <li><a class="nav-link page-scroll" href="#contact">Contact</a></li>
                         <li><a class="nav-link page-scroll" href="/login">LOGIN</a></li>
                     </ul>
