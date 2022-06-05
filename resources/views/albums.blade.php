@@ -12,7 +12,7 @@
             </div>
 
             <div class="row">
-                @foreach ($albums as $album)
+                @foreach ($albumss as $album)
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="ibox-content product-box">
@@ -36,9 +36,9 @@
     
     
     
-                                    <div class="small m-t-xs">
+                                    {{-- <div class="small m-t-xs">
                                         <a href="/talents/{{ $album->talent->slug }}" class="text-muted">{{ $album->talent->talent_name }}</a>
-                                    </div>
+                                    </div> --}}
                                     <div class="m-t text-righ">
     
                                         <a href="/albums/{{ $album->slug }}" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>

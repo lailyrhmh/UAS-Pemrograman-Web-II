@@ -12,7 +12,7 @@
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
                                 <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" method="post">Logout</a></li>
+                                <li><a class="dropdown-item" method="post" href="{{route('actionlogout')}}">Logout</a></li>
                             </ul>
                             @endauth
                         </div>
@@ -24,7 +24,7 @@
                         <a href="/dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
                     </li>
                     <li class="{{ ($title === 'Album') ? 'active' : '' }}">
-                        <a href="/listalbum"><i class="fa fa-dot-circle-o"></i> <span class="nav-label">Album</span></a>
+                        <a href="{{route('album.index')}}"><i class="fa fa-dot-circle-o"></i> <span class="nav-label">Album</span></a>
                     </li>
                     <li class="{{ ($title === 'Talents') ? 'active' : '' }}">
                         <a href="/listtalent"><i class="fa fa-group"></i> <span class="nav-label">Talent</span></a>

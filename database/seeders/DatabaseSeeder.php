@@ -89,25 +89,26 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Album::create([
-            'talent_id' => 1,
-            'album_name' => 'Hot Sauce',
+            'id' => 1,
+            'title' => 'Hot Sauce',
+            'artist' => 'Sauce',
             'slug' => 'album-hot-sauce',
-            'album_desc' => 'NCT DREAM 1st Full Album'
+            'description' => 'NCT DREAM 1st Full Album'
         ]);
 
-        Album::create([
-            'talent_id' => 1,
-            'album_name' => 'Hello Future',
-            'slug' => 'album-hello-future',
-            'album_desc' => 'NCT DREAM 1st Repackage Album'
-        ]);
+        // Album::create([
+        //     'talent_id' => 1,
+        //     'album_name' => 'Hello Future',
+        //     'slug' => 'album-hello-future',
+        //     'album_desc' => 'NCT DREAM 1st Repackage Album'
+        // ]);
 
-        Album::create([
-            'talent_id' => 2,
-            'album_name' => 'Border: Day One',
-            'slug' => 'album-border-day-one',
-            'album_desc' => 'ENHYPEN 1st Mini Album'
-        ]);
+        // Album::create([
+        //     'talent_id' => 2,
+        //     'album_name' => 'Border: Day One',
+        //     'slug' => 'album-border-day-one',
+        //     'album_desc' => 'ENHYPEN 1st Mini Album'
+        // ]);
 
         Image::create([
             'album_id' => 1,

@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('talent_id');
-            $table->string('album_name');
-            $table->string('slug')->unique();
-            $table->text('album_desc');
-            $table->string('version')->nullable();
+            // $table->foreignId('talent_id');
+            $table->string('title');
+            $table->text('artist');
+            $table->text('description');
+            $table->string('slug');
+            // $table->smallInteger('status');
             $table->timestamps();
         });
     }

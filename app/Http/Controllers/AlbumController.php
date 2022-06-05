@@ -1,21 +1,30 @@
 <?php
- 
+
 namespace App\Http\Controllers;
- 
+
 use App\Models\Album;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 // use App\Models\User;
- 
+
 class AlbumController extends Controller
 {
     public function index()
     {
+        $albums = Album::all();
+        // echo $albums;
+        return view('dashboard.list-album', [
+            "title" => "The Albums"
+        ], compact('albums'));
+    }
+
+    public function indexClient()
+    {
         return view('albums', [
             "title" => "The Albums",
-            "albums" => Album::all()
+            "albumss" => Album::all()
         ]);
-
-        // return view('album.index');
     }
 
     public function show(Album $album)
@@ -24,5 +33,105 @@ class AlbumController extends Controller
             "title" => "Info Album",
             "album" => $album
         ]);
+    }
+
+    public function create()
+    {
+        return view('dashboard.form-albumAdd', [
+            "title" => "Info Album"
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required|string|max:155',
+            'artist' => 'required',
+            'description' => 'required'
+        ]);
+
+        $album = Album::create([
+            'title' => $request->title,
+            'artist' => $request->artist,
+            'description' => $request->description,
+            'slug' => Str::slug($request->title)
+        ]);
+
+        if ($album) {
+            return redirect()
+                ->route('album.index')
+                ->with([
+                    'success' => 'New Album has been created successfully'
+                ]);
+        } else {
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with([
+                    'error' => 'Some problem occurred, please try again'
+                ]);
+        }
+    }
+    // --------------------------- Edit --------------------------------
+    public function edit($id)
+    {
+        $albums = Album::findOrFail($id);
+        return view('dashboard.form-albumEdit', [
+            "title" => "Info Album"
+        ], compact('albums'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'title' => 'required|string|max:155',
+            'artist' => 'required',
+            'description' => 'required'
+        ]);
+
+        $album = Album::findOrFail($id);
+
+        $album->update([
+            'title' => $request->title,
+            'artist' => $request->artist,
+            'description' => $request->description,
+            'slug' => Str::slug($request->title)
+        ]);
+
+        if ($album) {
+            return redirect()
+                ->route('album.index')
+                ->with([
+                    'success' => 'Album has been updated successfully'
+                ]);
+        } else {
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with([
+                    'error' => 'Some problem has occured, please try again'
+                ]);
+        }
+    }
+
+    // --------------------------- Delete --------------------------------
+    public function destroy($id)
+    {
+        $album = Album::findOrFail($id);
+        $album->delete();
+
+        if ($album) {
+            return redirect()
+                ->route('album.index')
+                ->with([
+                    'success' => 'Album has been deleted successfully'
+                ]);
+        } else {
+            return redirect()
+                ->route('album.index')
+                ->with([
+                    'error' => 'Some problem has occurred, please try again'
+                ]);
+        }
     }
 }
