@@ -11,6 +11,10 @@ class Album extends Model
 
     protected $guarded = ['id'];
 
+    protected $fillable = [
+        'title', 'artist', 'description', 'slug'
+    ];
+
     public function talent()
     {
         return $this->belongsTo(Talent::class);

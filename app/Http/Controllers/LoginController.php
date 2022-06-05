@@ -1,47 +1,53 @@
 <?php
- 
+
+namespace App\Http\Middleware;
+
 namespace App\Http\Controllers;
- 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
- 
+use Illuminate\Support\Facades\Session;
+
+
 class LoginController extends Controller
 {
     public function index()
     {
-        return view('login.login', [
-            "title" => "Login",
-            "active" => "login"
+        // return view('home');
+        return view('dashboard.dashboard', [
+            "title" => "Dashboard"
         ]);
 
         // return view('album.index');     tybnnb
     }
-    public function authenticate(Request $request)
+    public function login()
     {
-        $credentials = $request->validate([
-            'email' => 'required|email:dns',
-            'password' => 'required'
-        ]);
-
-        if(Auth::attempt($credentials))
-        {
-            $request->session()->regenerate();
-            return redirect()->intended('/dashboard');
+        if (Auth::check()) {
+            return redirect('dashboard');
+        } else {
+            return view('login.login');
         }
-
-        return back()->with('loginError', 'Login failed!');
     }
 
-    public function logout()
+    public function actionlogin(Request $request)
+    {
+        $data = [
+            'email' => $request->input('email'),
+            'password' => $request->input('password'),
+        ];
+
+        if (Auth::Attempt($data)) {
+            return redirect('dashboard');
+        } else {
+            Session::flash('error', 'Email atau Password Salah');
+            return redirect('/');
+        }
+    }
+
+    public function actionlogout()
     {
         Auth::logout();
- 
-        request()->session()->invalidate();
-     
-        request()->session()->regenerateToken();
-     
         return redirect('/');
     }
-
 }
