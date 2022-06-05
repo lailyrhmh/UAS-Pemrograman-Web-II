@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('label_id');
+            $table->string('staff_name');
+            $table->string('division');
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }
