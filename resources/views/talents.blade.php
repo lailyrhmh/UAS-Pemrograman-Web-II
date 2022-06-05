@@ -21,18 +21,14 @@
                                     [ INFO ]
                                 </div>
                                 <div class="product-desc">
-                                    <span class="product-price">
+                                    <!-- <span class="product-price">
                                         $10
-                                    </span>
+                                    </span> -->
                                     <a href="/talents/{{ $talent->slug }}" class="product-name">  {{ $talent->talent_name  }}</a>
-    
-    
-    
                                     <div class="small m-t-xs">
                                         {{ $talent->label->label_name }}
                                     </div>
                                     <div class="m-t text-righ">
-    
                                         <a href="/talents/{{ $talent->slug }}" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
                                     </div>
                                 </div>
