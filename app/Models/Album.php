@@ -12,7 +12,7 @@ class Album extends Model
     protected $guarded = ['id'];
 
     protected $fillable = [
-        'title', 'artist', 'description', 'slug'
+        'title', 'talent_id', 'description', 'slug'
     ];
 
     public function talent()

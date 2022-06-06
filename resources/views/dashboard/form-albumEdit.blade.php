@@ -22,8 +22,15 @@
                                     placeholder="Input Album Title" value="{{ old('title', $albums->title) }}"></div>
                         </div>
                         <div class="form-group row"><label class="col-sm-2 col-form-label">Artist :</label>
-                            <div class="col-sm-10"><input type="text" name="artist" id="title" class="form-control"
-                                    placeholder="Input Artist" value="{{ old('artist', $albums->artist) }}"></div>
+                            <div class="col-sm-10" class="form-control">
+                                <select class="form-control" name="talent_id" id="talent_id">
+                                    <!-- <option disabled value>Select Artist</option> -->
+                                    <option value="{{ $albums->talent_id }}">{{ $albums->talent->talent_name }}</option>
+                                    @foreach ($talent as $item)
+                                    <option value="{{ $item->id }}">{{ $item->talent_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group row"><label class="col-sm-2 col-form-label">Description:</label>
                             <div class="col-sm-10">

@@ -8,7 +8,7 @@
         <div class="tab-content">
             <div id="tab-1" class="tab-pane active">
                 <div class="panel-body">
-                    <form action="{{ route('album.store') }}" method="POST">
+                    <form action="{{ route('album.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf <!-- {{ csrf_field() }} -->
                         {{-- <fieldset> --}}
                         {{-- <div class="form-group row"><label class="col-sm-2 col-form-label">ID Album    :</label>
@@ -19,8 +19,14 @@
                                     placeholder="Input Album Title"></div>
                         </div>
                         <div class="form-group row"><label class="col-sm-2 col-form-label">Artist :</label>
-                            <div class="col-sm-10"><input type="text" name="artist" id="title" class="form-control"
-                                    placeholder="Input Artist"></div>
+                            <div class="col-sm-10" class="form-control">
+                                <select class="form-control" name="talent_id" id="talent_id">
+                                    <!-- <option disabled value>Select Artist</option> -->
+                                    @foreach ($talent as $item)
+                                    <option value="{{ $item->id }}">{{ $item->talent_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group row"><label class="col-sm-2 col-form-label">Description:</label>
                             <div class="col-sm-10">
@@ -68,7 +74,7 @@
                         <div class="hr-line-dashed"></div>
                         <div class="form-group row">
                             <div class="col-sm-4 col-sm-offset-2">
-                                <button class="btn btn-white btn-sm" type="submit">Cancel</button>
+                                <a href="{{ route('album.index') }}" class="btn btn-white btn-sm" type="button">Cancel</a>
                                 <button class="btn btn-primary btn-sm" type="submit">Save changes</button>
                             </div>
                         </div>

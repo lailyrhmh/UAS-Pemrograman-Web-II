@@ -41,7 +41,7 @@
                                                 {{ $album->title }}
                                             </td>
                                             <td>
-                                                {{ $album->artist }}
+                                                {{ $album->talent->talent_name }}
                                             </td>
                                             <td>
                                                 {{ $album->description }}

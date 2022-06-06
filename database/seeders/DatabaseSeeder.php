@@ -102,8 +102,9 @@ class DatabaseSeeder extends Seeder
 
         Album::create([
             'id' => 1,
+            'talent_id' => 1,
             'title' => 'Hot Sauce',
-            'artist' => 'Sauce',
+            // 'artist' => 'Sauce',
             'slug' => 'album-hot-sauce',
             'description' => 'NCT DREAM 1st Full Album'
         ]);

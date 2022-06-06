@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('talent', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('label_id');
+            $table->foreignId('label_id')->nullable();
             $table->string('talent_name');
             $table->string('slug')->nullable();
             $table->timestamps();

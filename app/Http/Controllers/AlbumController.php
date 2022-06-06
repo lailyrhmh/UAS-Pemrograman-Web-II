@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Album;
 use App\Http\Controllers\Controller;
+use App\Models\Talent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 // use App\Models\User;
@@ -12,7 +13,7 @@ class AlbumController extends Controller
 {
     public function index()
     {
-        $albums = Album::all();
+        $albums = Album::with('talent')->orderBy('id')->paginate(10);
         // echo $albums;
         return view('dashboard.list-album', [
             "title" => "The Albums"
@@ -37,25 +38,32 @@ class AlbumController extends Controller
 
     public function create()
     {
+        $talent = Talent::all();
         return view('dashboard.form-albumAdd', [
             "title" => "Info Album"
-        ]);
+        ], compact('talent'));
+        
     }
 
     public function store(Request $request)
     {
+        // return $request->file('image')->store('album-image');
+        // dd($request->all());
+
         $this->validate($request, [
             'title' => 'required|string|max:155',
-            'artist' => 'required',
+            'talent_id' => 'required|numeric',
             'description' => 'required'
         ]);
 
         $album = Album::create([
             'title' => $request->title,
-            'artist' => $request->artist,
+            'talent_id' => $request->talent_id,
             'description' => $request->description,
             'slug' => Str::slug($request->title)
         ]);
+
+        // dd($request);
 
         if ($album) {
             return redirect()
@@ -75,17 +83,18 @@ class AlbumController extends Controller
     // --------------------------- Edit --------------------------------
     public function edit($id)
     {
-        $albums = Album::findOrFail($id);
+        $talent = Talent::all();
+        $albums = Album::with('talent')->findOrFail($id);
         return view('dashboard.form-albumEdit', [
             "title" => "Info Album"
-        ], compact('albums'));
+        ], compact('albums', 'talent'));
     }
 
     public function update(Request $request, $id)
     {
         $this->validate($request, [
             'title' => 'required|string|max:155',
-            'artist' => 'required',
+            'talent_id' => 'required',
             'description' => 'required'
         ]);
 
@@ -93,7 +102,7 @@ class AlbumController extends Controller
 
         $album->update([
             'title' => $request->title,
-            'artist' => $request->artist,
+            'talent_id' => $request->talent_id,
             'description' => $request->description,
             'slug' => Str::slug($request->title)
         ]);
