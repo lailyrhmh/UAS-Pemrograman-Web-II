@@ -8,7 +8,7 @@
     <div class="ibox-content m-b-sm border-bottom">
         <div class="row">
             <div class="col-sm-4">
-                <button type="button" class="btn btn-w-m btn-primary">Add Label</button>
+                <a href="{{route('label.create')}}" type="button" class="btn btn-w-m btn-primary">Add Label</a>
         </div>
     </div>
 
@@ -26,6 +26,7 @@
                         <th data-hide="phone">Branch</th>
                         <th data-hide="phone">Total Staffs</th>
                         <th data-hide="phone">Total Talents</th>
+                        <th data-hide="phone">Total Trainees</th>
                         <th data-hide="phone">Established Date</th>
                         <th></th>
                         <th class="text-right"> Action</th>
@@ -33,21 +34,25 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @forelse ($labels as $label)
                     <tr>
                         <td>
-                           1001
+                           {{ $label->id }}
                         </td>
                         <td>
-                            BELIFT LAB
+                            {{ $label->label_name }}
                         </td>
                         <td>
-                            Music
+                            {{ $label->branch }}
                         </td>
                         <td>
-                            2
+                            {{ $label->staff->count() }}
                         </td>
                         <td>
-                            1
+                            {{ $label->talent->count() }}
+                        </td>
+                        <td>
+                            {{ $label->trainee->count() }}
                         </td>
                         <td>
                             30/11/2020
@@ -58,11 +63,21 @@
                         </td>
                         <td class="text-right">
                             <div class="btn-group">
+                            <form onsubmit="return confirm('Apakah Anda Yakin ?');"
+                                action="{{ route('label.destroy', $label->id) }}" method="POST">
                                 <a href="/detail-label" class="btn btn-xs btn-outline btn-primary">View</i> </a>
-                                <a href="/form-label" class="btn btn-xs btn-outline btn-primary">Edit</i> </a>
-                                <a href="/" class="btn btn-xs btn-outline btn-danger">Delete</a>   
+                                <a href="{{ route('label.edit', $label->id) }}" class="btn btn-xs btn-outline btn-primary">Edit</i> </a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-xs btn-outline btn-danger">Delete</a>   
                             </div>
                         </td>
                     </tr>
+                    @empty
+                    <tr>
+                        <td class="text-center text-mute" colspan="4">Data Album tidak tersedia</td>
+                    </tr>
+                    @endforelse
+                    </tbody>
 
 @endsection

@@ -5,6 +5,7 @@ use App\Models\Staff;
 use App\Models\Talent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\LabelController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\TalentController;
@@ -79,6 +80,13 @@ Route::get('/staffs/{staff:slug}', [StaffController::class, 'show']);
 // Staff Admin
 Route::resource('staff', StaffController::class);
 
+// Label Client
+Route::get('/labels', [LabelController::class, 'indexClient']);
+Route::get('/labels/{label:slug}', [LabelController::class, 'show']);
+
+// Label Admin
+Route::resource('label', LabelController::class);
+
 
 
 
@@ -97,11 +105,11 @@ Route::get('/user', function () {
 //     ]);
 // });
 
-Route::get('/listlabel', function () {
-    return view('dashboard.list-label', [
-        "title" => "Labels"
-    ]);
-});
+// Route::get('/listlabel', function () {
+//     return view('dashboard.list-label', [
+//         "title" => "Labels"
+//     ]);
+// });
 
 // Route::get('/listtrainee', function () {
 //     return view('dashboard.list-trainee', [
@@ -170,11 +178,11 @@ Route::get('/form-album', function () {
 //     ]);
 // });
 
-Route::get('/form-label', function () {
-    return view('dashboard.form-label', [
-        "title" => "form_label"
-    ]);
-});
+// Route::get('/form-label', function () {
+//     return view('dashboard.form-label', [
+//         "title" => "form_label"
+//     ]);
+// });
 
 // Route::get('/form-trainee', function () {
 //     return view('dashboard.form-trainee', [

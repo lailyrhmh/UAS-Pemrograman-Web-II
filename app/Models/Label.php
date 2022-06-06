@@ -25,4 +25,9 @@ class Label extends Model
     {
         return $this->hasMany(Staff::class);
     }
+
+    // public function talents()
+    // {
+    //     return $this->belongsToMany(Role::class);
+    // }
 }
