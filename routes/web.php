@@ -5,8 +5,9 @@ use App\Models\Staff;
 use App\Models\Talent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
-use App\Http\Controllers\TalentController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TalentController;
+use App\Http\Controllers\TraineeController;
 use App\Http\Controllers\RegisterController;
 
 
@@ -35,9 +36,10 @@ Route::get('/', function () {
 //         "title" => "Album"
 //     ]);
 // });
+
+// Album Client
 Route::get('/albums', [AlbumController::class, 'indexClient']);
 Route::get('/albums/{album:slug}', [AlbumController::class, 'show']);
-
 
 // Album Admin
 Route::resource('album', AlbumController::class);
@@ -61,6 +63,13 @@ Route::get('/talents/{talent:slug}', [TalentController::class, 'show']);
 
 // Talent Admin
 Route::resource('talent', TalentController::class);
+
+// Trainee Client
+Route::get('/trainees', [TraineeController::class, 'indexClient']);
+Route::get('/trainees/{trainee:slug}', [TraineeController::class, 'show']);
+
+// Talent Admin
+Route::resource('trainee', TraineeController::class);
 
 
 
@@ -87,11 +96,11 @@ Route::get('/listlabel', function () {
     ]);
 });
 
-Route::get('/listtrainee', function () {
-    return view('dashboard.list-trainee', [
-        "title" => "Trainee"
-    ]);
-});
+// Route::get('/listtrainee', function () {
+//     return view('dashboard.list-trainee', [
+//         "title" => "Trainee"
+//     ]);
+// });
 
 Route::get('/detail-album', function () {
     return view('dashboard.detail-album', [
@@ -160,11 +169,11 @@ Route::get('/form-label', function () {
     ]);
 });
 
-Route::get('/form-trainee', function () {
-    return view('dashboard.form-trainee', [
-        "title" => "form_trainee"
-    ]);
-});
+// Route::get('/form-trainee', function () {
+//     return view('dashboard.form-trainee', [
+//         "title" => "form_trainee"
+//     ]);
+// });
 
 Route::get('/form-imageAdd', function () {
     return view('dashboard.form-imageAdd', [

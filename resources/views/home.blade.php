@@ -169,116 +169,36 @@
                         </div>
                     </div>
             </div>
-            <div class="row">
-                    <div class="col-md-3">
-                        <div class="ibox">
-                            <div class="ibox-content product-box">
-    
-                                <div class="product-imitation">
-                                    [ INFO ]
-                                </div>
-                                <div class="product-desc">
-                                    <span class="product-price">
-                                        $10
-                                    </span>
-                                    <small class="text-muted">Category</small>
-                                    <a href="#" class="product-name"> Product</a>
-    
-    
-    
-                                    <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
-                                    </div>
-                                    <div class="m-t text-righ">
-    
-                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="ibox">
-                            <div class="ibox-content product-box">
-    
-                                <div class="product-imitation">
-                                    [ INFO ]
-                                </div>
-                                <div class="product-desc">
-                                    <span class="product-price">
-                                        $10
-                                    </span>
-                                    <small class="text-muted">Category</small>
-                                    <a href="#" class="product-name"> Product</a>
-    
-    
-    
-                                    <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
-                                    </div>
-                                    <div class="m-t text-righ">
-    
-                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="ibox">
-                            <div class="ibox-content product-box">
-    
-                                <div class="product-imitation">
-                                    [ INFO ]
-                                </div>
-                                <div class="product-desc">
-                                    <span class="product-price">
-                                        $10
-                                    </span>
-                                    <small class="text-muted">Category</small>
-                                    <a href="#" class="product-name"> Product</a>
-    
-    
-    
-                                    <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
-                                    </div>
-                                    <div class="m-t text-righ">
-    
-                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="ibox">
-                            <div class="ibox-content product-box">
-    
-                                <div class="product-imitation">
-                                    [ INFO ]
-                                </div>
-                                <div class="product-desc">
-                                    <span class="product-price">
-                                        $10
-                                    </span>
-                                    <small class="text-muted">Category</small>
-                                    <a href="#" class="product-name"> Product</a>
-    
-    
-    
-                                    <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
-                                    </div>
-                                    <div class="m-t text-righ">
-    
-                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
+            
+
+            <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>The Description Product of Albums</h1>
+                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                </div>
+            </div>
+            <div class="row features-block">
+                <div class="col-lg-6 features-text wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+                <small>INSPINA</small>
+                <h2>Perfectly designed</h2>
+                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
+                <a href class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col-lg-6 text-right wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+            <img src="" alt="" class="img-fluid float-right">
+            </div>
+            </div>
+            
+            <!-- staff -->
+            <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>The Staffs</h1>
+                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                </div>
             </div>
             <div class="row">
                     <div class="col-md-3">
@@ -289,16 +209,120 @@
                                     [ INFO ]
                                 </div>
                                 <div class="product-desc">
-                                    <span class="product-price">
-                                        $10
-                                    </span>
                                     <small class="text-muted">Category</small>
-                                    <a href="#" class="product-name"> Product</a>
+                                    <a href="#" class="product-name"> Creative Team</a>
     
     
     
                                     <div class="small m-t-xs">
                                         Many desktop publishing packages and web page editors now.
+                                    </div>
+                                    <div class="m-t text-righ">
+    
+                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Read More <i class="fa fa-long-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="ibox">
+                            <div class="ibox-content product-box">
+    
+                                <div class="product-imitation">
+                                    [ INFO ]
+                                </div>
+                                <div class="product-desc">
+                                    <small class="text-muted">Category</small>
+                                    <a href="#" class="product-name"> Creative Team</a>
+    
+    
+    
+                                    <div class="small m-t-xs">
+                                        Many desktop publishing packages and web page editors now.
+                                    </div>
+                                    <div class="m-t text-righ">
+    
+                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Read More <i class="fa fa-long-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="ibox">
+                            <div class="ibox-content product-box active">
+    
+                                <div class="product-imitation">
+                                    [ INFO ]
+                                </div>
+                                <div class="product-desc">
+                                    <small class="text-muted">Category</small>
+                                    <a href="#" class="product-name"> Creative Team</a>
+    
+    
+    
+                                    <div class="small m-t-xs">
+                                        Many desktop publishing packages and web page editors now.
+                                    </div>
+                                    <div class="m-t text-righ">
+    
+                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Read More <i class="fa fa-long-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="ibox">
+                            <div class="ibox-content product-box">
+    
+                                <div class="product-imitation">
+                                    [ INFO ]
+                                </div>
+                                <div class="product-desc">
+                                    <small class="text-muted">Category</small>
+                                    <a href="#" class="product-name"> Creative Team</a>
+    
+    
+    
+                                    <div class="small m-t-xs">
+                                        Many desktop publishing packages and web page editors now.
+                                    </div>
+                                    <div class="m-t text-righ">
+    
+                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Read More <i class="fa fa-long-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Talent -->
+            <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>The Talents</h1>
+                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-3">
+                        <div class="ibox">
+                            <div class="ibox-content product-box">
+    
+                                <div class="product-imitation">
+                                    [ INFO ]
+                                </div>
+                                <div class="product-desc">
+                                    <a href="#" class="product-name"> NCT DREAM</a>
+    
+    
+    
+                                    <div class="small m-t-xs">
+                                        SM Ent
                                     </div>
                                     <div class="m-t text-righ">
     
@@ -316,16 +340,35 @@
                                     [ INFO ]
                                 </div>
                                 <div class="product-desc">
-                                    <span class="product-price">
-                                        $10
-                                    </span>
-                                    <small class="text-muted">Category</small>
-                                    <a href="#" class="product-name"> Product</a>
+                                    <a href="#" class="product-name"> ENHYPEN</a>
     
     
     
                                     <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
+                                        Belift+
+                                    </div>
+                                    <div class="m-t text-righ">
+    
+                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="ibox">
+                            <div class="ibox-content product-box active">
+    
+                                <div class="product-imitation">
+                                    [ INFO ]
+                                </div>
+                                <div class="product-desc">
+                                    <a href="#" class="product-name"> NCT DREAM</a>
+    
+    
+    
+                                    <div class="small m-t-xs">
+                                        SM Ent
                                     </div>
                                     <div class="m-t text-righ">
     
@@ -343,16 +386,12 @@
                                     [ INFO ]
                                 </div>
                                 <div class="product-desc">
-                                    <span class="product-price">
-                                        $10
-                                    </span>
-                                    <small class="text-muted">Category</small>
-                                    <a href="#" class="product-name"> Product</a>
+                                    <a href="#" class="product-name"> NCT DREAM</a>
     
     
     
                                     <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
+                                        SM Ent
                                     </div>
                                     <div class="m-t text-righ">
     
@@ -362,34 +401,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="ibox">
-                            <div class="ibox-content product-box">
-    
-                                <div class="product-imitation">
-                                    [ INFO ]
-                                </div>
-                                <div class="product-desc">
-                                    <span class="product-price">
-                                        $10
-                                    </span>
-                                    <small class="text-muted">Category</small>
-                                    <a href="#" class="product-name"> Product</a>
-    
-    
-    
-                                    <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
-                                    </div>
-                                    <div class="m-t text-righ">
-    
-                                        <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
+            </div>
+
+            <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>The Talents detail</h1>
+                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
+                        (album yg telah dirilis)
+                    </p>
+                </div>
+            </div>
+            <div class="row features-block">
+                <div class="col-lg-6 features-text wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+                <small>INSPINA</small>
+                <h2>Perfectly designed</h2>
+                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
+                <a href class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col-lg-6 text-right wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+            <img src="" alt="" class="img-fluid float-right">
+            </div>
+            </div>
+
             </div>
         </div>
     </section>
@@ -399,7 +434,7 @@
             <div class="row m-b-lg">
                 <div class="col-lg-12 text-center">
                     <div class="navy-line"></div>
-                    <h1>Contact Us</h1>
+                    <h1>About Us</h1>
                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
                 </div>
             </div>
