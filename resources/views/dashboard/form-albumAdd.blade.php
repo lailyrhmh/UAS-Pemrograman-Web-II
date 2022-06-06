@@ -19,11 +19,11 @@
                                     placeholder="Input Album Title"></div>
                         </div>
                         <div class="form-group row"><label class="col-sm-2 col-form-label">Artist :</label>
-                            <div class="col-sm-10" name="talent_id" id="title" class="form-control">
-                                <select class="form-control" >
-                                    <option>Select Artist</option>
-                                    @foreach ($tal as $album)
-                                    <option value="{{ $album->id }}">{{ $album->talent_name }}</option>
+                            <div class="col-sm-10" class="form-control">
+                                <select class="form-control" name="talent_id" id="talent_id">
+                                    <!-- <option disabled value>Select Artist</option> -->
+                                    @foreach ($talent as $item)
+                                    <option value="{{ $item->id }}">{{ $item->talent_name }}</option>
                                     @endforeach
                                 </select>
                             </div>

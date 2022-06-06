@@ -13,7 +13,7 @@ class AlbumController extends Controller
 {
     public function index()
     {
-        $albums = Album::with('talent')->latest()->paginate(10);
+        $albums = Album::with('talent')->orderBy('id')->paginate(10);
         // echo $albums;
         return view('dashboard.list-album', [
             "title" => "The Albums"
@@ -38,20 +38,21 @@ class AlbumController extends Controller
 
     public function create()
     {
-        $tal = Talent::all();
+        $talent = Talent::all();
         return view('dashboard.form-albumAdd', [
             "title" => "Info Album"
-        ], compact('tal'));
+        ], compact('talent'));
         
     }
 
     public function store(Request $request)
     {
         // return $request->file('image')->store('album-image');
+        // dd($request->all());
 
         $this->validate($request, [
             'title' => 'required|string|max:155',
-            'talent_id' => 'required',
+            'talent_id' => 'required|numeric',
             'description' => 'required'
         ]);
 
