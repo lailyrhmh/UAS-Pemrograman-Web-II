@@ -40,6 +40,11 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a type="button" href="{{ route('image.create') }}" class="btn btn-w-m btn-primary">Add Image</a>
+                            </div>
+                        </div>
                         {{-- <div class="form-group" id="data_1"><label class="font-normal">Release Date: </label>
                             <div class="input-group date">
                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
