@@ -80,7 +80,7 @@ class TalentController extends Controller
         return view('dashboard.form-talentEdit', [
             "title" => "Info Talent"
         ], compact('talents', 'label'));
-    }
+     }
 
     public function update(Request $request, $id)
     {
