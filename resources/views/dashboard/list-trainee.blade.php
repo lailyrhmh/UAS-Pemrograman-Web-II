@@ -40,7 +40,7 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-xs btn-outline btn-danger">Hapus</button>
                         </div>
-                        </form>
+                    </form>
                     
                 </td>
                     </a>

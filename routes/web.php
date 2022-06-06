@@ -6,6 +6,7 @@ use App\Models\Talent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\StaffController;
 use App\Http\Controllers\TalentController;
 use App\Http\Controllers\TraineeController;
 use App\Http\Controllers\RegisterController;
@@ -68,9 +69,15 @@ Route::resource('talent', TalentController::class);
 Route::get('/trainees', [TraineeController::class, 'indexClient']);
 Route::get('/trainees/{trainee:slug}', [TraineeController::class, 'show']);
 
-// Talent Admin
+// Trainee Admin
 Route::resource('trainee', TraineeController::class);
 
+// Staff Client
+Route::get('/staffs', [StaffController::class, 'indexClient']);
+Route::get('/staffs/{staff:slug}', [StaffController::class, 'show']);
+
+// Staff Admin
+Route::resource('staff', StaffController::class);
 
 
 
@@ -84,11 +91,11 @@ Route::get('/user', function () {
 });
 
 
-Route::get('/liststaff', function () {
-    return view('dashboard.list-staff', [
-        "title" => "Staffs"
-    ]);
-});
+// Route::get('/liststaff', function () {
+//     return view('dashboard.list-staff', [
+//         "title" => "Staffs"
+//     ]);
+// });
 
 Route::get('/listlabel', function () {
     return view('dashboard.list-label', [
@@ -138,12 +145,12 @@ Route::get('/form-album', function () {
     ]);
 });
 
-Route::get('/staff', function () {
-    return view('staff', [
-        "title" => "Staffs",
-        //  "staffs" => Staff::all()
-    ]);
-});
+// Route::get('/staff', function () {
+//     return view('staff', [
+//         "title" => "Staffs",
+//         //  "staffs" => Staff::all()
+//     ]);
+// });
 
 // Route::get('/talent', function () {
 //     return view('talent', [
@@ -157,11 +164,11 @@ Route::get('/staff', function () {
 //     ]);
 // });
 
-Route::get('/form-staff', function () {
-    return view('dashboard.form-staff', [
-        "title" => "form_staff"
-    ]);
-});
+// Route::get('/form-staff', function () {
+//     return view('dashboard.form-staff', [
+//         "title" => "form_staff"
+//     ]);
+// });
 
 Route::get('/form-label', function () {
     return view('dashboard.form-label', [
