@@ -9,13 +9,18 @@ class ImageController extends Controller
 {
     //
 
-    public function create()
-    {
+    // public function create()
+    // {
         // $talent = Talent::all();
         // return view('dashboard.form-albumAdd', [
         //     "title" => "Info Album"
         // ], compact('talent'));
         
+    // }
+
+    public function create(){
+        return view('dashboard.form-imageAdd', [
+            "title" => "Info Album"]);
     }
 
     public function store(Request $request)
