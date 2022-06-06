@@ -21,12 +21,6 @@
                     <h3 class="m-b-xs"><strong>{{ $staff->staff_name }}</strong></h3>
 
                     <div class="font-bold">{{ $staff->division }}</div>
-                    <address class="m-t-md">
-                        <strong>{{ $staff->label->label_name }}</strong><br>
-                        795 Folsom Ave, Suite 600<br>
-                        San Francisco, CA 94107<br>
-                        <abbr title="Phone">P:</abbr> (123) 456-7890
-                    </address>
 
                 </a>
                 <div class="contact-box-footer">

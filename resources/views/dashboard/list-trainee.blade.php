@@ -4,7 +4,7 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="ibox-content m-b-sm border-bottom">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 <a href="{{ route('trainee.create') }}" type="button" class="btn btn-w-m btn-primary">Add Trainee</a>
         </div>
     </div>
@@ -14,7 +14,7 @@
         <div class="col-lg-4">
             <div class="contact-box">
                 <a class="row" href="profile.html">
-                <div class="col-4">
+                <div class="col-2">
                     <div class="text-center">
                         <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a2.jpg">
                     </div>
@@ -22,10 +22,6 @@
                 <div class="col-8">
                     <h3><strong>{{ $trainee->trainee_name }}</strong></h3>
                     <p><i class="fa fa-building"></i> {{ $trainee->label->label_name }}</p>
-                    <address>
-                        <strong>Trainee Date</strong><br>
-                        30 November 2020 <br>
-                    </address>
     
                 </div>
                 <td class="text-left">
