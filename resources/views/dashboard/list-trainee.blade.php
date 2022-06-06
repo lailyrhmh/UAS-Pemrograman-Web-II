@@ -10,6 +10,7 @@
     </div>
 
     <div class="row">
+        @forelse ($trainees as $trainee)
         <div class="col-lg-4">
             <div class="contact-box">
                 <a class="row" href="profile.html">
@@ -19,8 +20,8 @@
                     </div>
                 </div>
                 <div class="col-8">
-                    <h3><strong>James Wang</strong></h3>
-                    <p><i class="fa fa-building"></i> BE:LIFT LAB</p>
+                    <h3><strong>{{ $trainee->trainee_name }}</strong></h3>
+                    <p><i class="fa fa-building"></i> {{ $trainee->label->label_name }}</p>
                     <address>
                         <strong>Trainee Date</strong><br>
                         30 November 2020 <br>
@@ -31,12 +32,15 @@
                     <div class="btn-group col-4">
                         <a href="/detail-trainee" class="btn btn-xs btn-outline btn-primary">View</i> </a>
                         <a href="/form-trainee" class="btn btn-xs btn-outline btn-primary">Edit</i> </a>
+                        @csrf
+                        @method('DELETE')
                         <a href="/" class="btn btn-xs btn-outline btn-danger">Delete</a>   
                     </div>
                 </td>
                     </a>
             </div>
-            
         </div>
-
+        @empty
+        @endforelse
+    </div>
  @endsection
