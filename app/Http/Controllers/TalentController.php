@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Talent;
 use App\Http\Controllers\Controller;
+use App\Models\Label;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 // use App\Models\User;
@@ -12,7 +13,7 @@ class TalentController extends Controller
 {
     public function index()
     {
-        $talents = Talent::all();
+        $talents = Talent::with('label')->paginate(10);
         // echo $albums;
         return view('dashboard.list-talent', [
             "title" => "Our Talents"
@@ -37,9 +38,10 @@ class TalentController extends Controller
 
     public function create()
     {
+        $label = Label::all();
         return view('dashboard.form-talentAdd', [
             "title" => "Info Talent"
-        ]);
+        ], compact('label'));
     }
 
     public function store(Request $request)
@@ -52,7 +54,7 @@ class TalentController extends Controller
         $talent = Talent::create([
             'label_id' => $request->label_id,
             'talent_name' => $request->talent_name,
-            'slug' => Str::slug($request->label_id)
+            'slug' => Str::slug($request->talent_name)
         ]);
 
         if ($talent) {

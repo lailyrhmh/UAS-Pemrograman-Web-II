@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-8">
                     <h3><strong>{{ $talent->talent_name }}</strong></h3>
-                    <p><i class="fa fa-building"></i> BE:LIFT LAB</p>
+                    <p><i class="fa fa-building"></i>{{ $talent->label->label_name }}</p>
                     <address>
                         <strong>Debut Date</strong><br>
                         30 November 2020 <br>

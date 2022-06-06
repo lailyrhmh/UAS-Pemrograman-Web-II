@@ -18,9 +18,14 @@
                         <div class="col-sm-10"><input type="text" name="talent_name" id="talent_name" class="form-control"
                                 placeholder="Input Talent Name"></div>
                     </div>
-                    <div class="form-group row"><label class="col-sm-2 col-form-label">Label ID :</label>
-                        <div class="col-sm-10"><input type="text" name="label_id" id="label_id" class="form-control"
-                                placeholder="Input Label ID"></div>
+                    <div class="form-group row"><label class="col-sm-2 col-form-label">Label :</label>
+                        <div class="col-sm-10" class="form-control">
+                            <select class="form-control" name="label_id" id="label_id">
+                                @foreach ($label as $item)
+                                <option value="{{ $item->id }}">{{ $item->label_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                         {{-- <div class="form-group row"><label class="col-sm-2 col-form-label">Description:</label>
                             <div class="col-sm-10">
