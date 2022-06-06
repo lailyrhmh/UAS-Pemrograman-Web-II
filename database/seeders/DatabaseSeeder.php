@@ -41,6 +41,12 @@ class DatabaseSeeder extends Seeder
             'password' => encrypt('12345')
         ]);
 
+        User::create([
+            'name' => 'Laily Rachmah',
+            'email' => 'lailyrhmh11@gmail.com',
+            'password' => encrypt('password')
+        ]);
+
         Talent::create([
             'label_id' => '2',
             'talent_name' => 'NCT DREAM',
