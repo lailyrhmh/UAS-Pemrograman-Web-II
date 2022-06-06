@@ -30,7 +30,7 @@
                         <a href="{{route('talent.index')}}"><i class="fa fa-group"></i> <span class="nav-label">Talent</span></a>
                     </li>
                     <li class="{{ ($title === 'Staffs') ? 'active' : '' }}">
-                        <a href="/liststaff"><i class="fa fa-vcard-o"></i> <span class="nav-label">Staff</span></a>
+                        <a href="{{route('staff.index')}}"><i class="fa fa-vcard-o"></i> <span class="nav-label">Staff</span></a>
                     </li>
                     <li class="{{ ($title === 'Labels') ? 'active' : '' }}">
                         <a href="/listlabel"><i class="fa fa-building"></i> <span class="nav-label">Label</span></a>

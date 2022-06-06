@@ -9,6 +9,8 @@ class Staff extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function label()
     {
         return $this->belongsTo(Label::class);

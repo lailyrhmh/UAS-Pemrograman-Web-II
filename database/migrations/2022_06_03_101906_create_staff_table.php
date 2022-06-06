@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('label_id');
             $table->string('staff_name');
-            $table->string('division');
+            $table->string('division')->nullable();
             $table->string('slug')->nullable();
             $table->timestamps();
         });
