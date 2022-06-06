@@ -34,7 +34,7 @@ class ImageController extends Controller
 
         $image = Image::create([
             'title' => $request->title,
-            'talent_id' => $request->talent_id,
+            // 'talent_id' => $request->talent_id,
             'description' => $request->description,
         ]);
 
