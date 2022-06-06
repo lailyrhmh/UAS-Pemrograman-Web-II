@@ -22,8 +22,12 @@
                                     placeholder="Input Talent Name" value="{{ old('talent_name', $talents->talent_name) }}"></div>
                         </div>
                         <div class="form-group row"><label class="col-sm-2 col-form-label">Label ID :</label>
-                            <div class="col-sm-10"><input type="text" name="label_id" id="label_id" class="form-control"
-                                    placeholder="Input Label ID" value="{{ old('label_id', $talents->label_id) }}"></div>
+                            <select class="form-control"  name="label_id" id="label_id">
+                                <option value="{{ $talents->label_id }}">{{ $talents->label->label_name }}</option>
+                                @foreach ($label as $item)
+                                <option value="{{ $item->id }}">{{ $item->label_name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         {{-- <div class="form-group row"><label class="col-sm-2 col-form-label">Description:</label>
                             <div class="col-sm-10">
