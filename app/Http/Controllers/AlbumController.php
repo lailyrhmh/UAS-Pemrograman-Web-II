@@ -83,17 +83,18 @@ class AlbumController extends Controller
     // --------------------------- Edit --------------------------------
     public function edit($id)
     {
-        $albums = Album::findOrFail($id);
+        $talent = Talent::all();
+        $albums = Album::with('talent')->findOrFail($id);
         return view('dashboard.form-albumEdit', [
             "title" => "Info Album"
-        ], compact('albums'));
+        ], compact('albums', 'talent'));
     }
 
     public function update(Request $request, $id)
     {
         $this->validate($request, [
             'title' => 'required|string|max:155',
-            'artist' => 'required',
+            'talent_id' => 'required',
             'description' => 'required'
         ]);
 
@@ -101,7 +102,7 @@ class AlbumController extends Controller
 
         $album->update([
             'title' => $request->title,
-            'artist' => $request->artist,
+            'talent_id' => $request->talent_id,
             'description' => $request->description,
             'slug' => Str::slug($request->title)
         ]);
