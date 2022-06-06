@@ -26,6 +26,9 @@
 <script src="{{ asset('js/inspinia.j') }}"></script>
 <script src="{{ asset('js/plugins/pace/pace.min.js') }}"></script>
 
+<!-- DROPZONE -->
+<!-- <script src="js/plugins/dropzone/dropzone.js"></script> -->
+
 
 
 <script>
@@ -36,7 +39,6 @@
             checkboxClass: 'icheckbox_square-green',
             radioClass: 'iradio_square-green',
         });
-    });
 
         $('body').scrollspy({
             target: '#navbar',
@@ -113,6 +115,12 @@
         init();
 
     })();
+
+    // Dropzone.options.dropzoneForm = {
+    //         paramName: "file", // The name that will be used to transfer the file
+    //         maxFilesize: 2, // MB
+    //         dictDefaultMessage: "<strong>Drop files here or click to upload. </strong></br> (This is just a demo dropzone. Selected files are not actually uploaded.)"
+    //     };
 
     // Activate WOW.js plugin for animation on scrol
     new WOW().init();

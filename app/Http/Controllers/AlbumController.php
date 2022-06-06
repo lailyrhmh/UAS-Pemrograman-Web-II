@@ -44,6 +44,8 @@ class AlbumController extends Controller
 
     public function store(Request $request)
     {
+        // return $request->file('image')->store('album-image');
+
         $this->validate($request, [
             'title' => 'required|string|max:155',
             'artist' => 'required',

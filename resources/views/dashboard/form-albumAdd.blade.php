@@ -8,7 +8,7 @@
         <div class="tab-content">
             <div id="tab-1" class="tab-pane active">
                 <div class="panel-body">
-                    <form action="{{ route('album.store') }}" method="POST">
+                    <form action="{{ route('album.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf <!-- {{ csrf_field() }} -->
                         {{-- <fieldset> --}}
                         {{-- <div class="form-group row"><label class="col-sm-2 col-form-label">ID Album    :</label>
