@@ -13,7 +13,11 @@
                         <li><a class="nav-link page-scroll" href="/albums">Albums</a></li>
                         <li><a class="nav-link page-scroll" href="/staff">Staff</a></li>
                         <li><a class="nav-link page-scroll" href="/talents">Talent</a></li>
-                        <li><a class="nav-link page-scroll" href="#contact">Contact</a></li>
+<<<<<<< HEAD
+                        <li><a class="nav-link page-scroll" href="#contact">About</a></li>
+=======
+                        <li><a class="nav-link page-scroll" href="#contact" href="/">About</a></li>
+>>>>>>> d67b477a620e9255696e8f621df541f1c41d9a82
                         <li><a class="nav-link page-scroll" href="/login">LOGIN</a></li>
                     </ul>
                 </div>
