@@ -4,7 +4,7 @@
     <div class="wrapper wrapper-content animated fadeInRight ecommerce">
 
 
-        <div class="ibox-content m-b-sm border-bottom">
+        <div class="ibox-content -b-sm border-bottom">
             <div class="row">
                 <div class="col-sm-4">
                     <a type="button" href="{{ route('album.create') }}" class="btn btn-w-m btn-primary">Add Album</a>
@@ -12,7 +12,7 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                     <div class="ibox">
                         <div class="ibox-content">
 
@@ -24,9 +24,7 @@
                                         <th data-hide="phone">Album Title</th>
                                         <th data-hide="phone">Artist</th>
                                         <th data-hide="phone">Description</th>
-                                        <th data-hide="phone">Release Date</th>
-                                        <th data-hide="phone">Total Version</th>
-                                        <th></th>
+
                                         <th class="text-right"> Action</th>
 
                                     </tr>
@@ -46,13 +44,6 @@
                                             <td>
                                                 {{ $album->description }}
                                             </td>
-                                            <td>
-                                                30/11/2020
-                                            </td>
-                                            <td>
-                                                Mini Album
-                                            </td>
-                                            <td>
 
                                             </td>
                                             <td class="text-right">
