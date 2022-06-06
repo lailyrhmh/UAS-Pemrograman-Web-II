@@ -5,6 +5,7 @@ use App\Models\Staff;
 use App\Models\Talent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LabelController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StaffController;
@@ -86,6 +87,9 @@ Route::get('/labels/{label:slug}', [LabelController::class, 'show']);
 
 // Label Admin
 Route::resource('label', LabelController::class);
+
+// Image Admin
+Route::resource('image', ImageController::class);
 
 
 
