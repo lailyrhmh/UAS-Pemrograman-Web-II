@@ -36,7 +36,7 @@
                         <a href="/listlabel"><i class="fa fa-building"></i> <span class="nav-label">Label</span></a>
                     </li>
                     <li class="{{ ($title === 'Trainee') ? 'active' : '' }}">
-                        <a href="/listtrainee"><i class="fa fa-user"></i> <span class="nav-label">Trainee</span></a>
+                        <a href="{{ route('trainee.index') }}"><i class="fa fa-user"></i> <span class="nav-label">Trainee</span></a>
                     </li>
                 </ul>
 
