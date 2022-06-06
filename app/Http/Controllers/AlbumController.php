@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Album;
 use App\Http\Controllers\Controller;
+use App\Models\Talent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 // use App\Models\User;
@@ -12,7 +13,7 @@ class AlbumController extends Controller
 {
     public function index()
     {
-        $albums = Album::all();
+        $albums = Album::with('talent')->latest()->paginate(10);
         // echo $albums;
         return view('dashboard.list-album', [
             "title" => "The Albums"
@@ -37,9 +38,11 @@ class AlbumController extends Controller
 
     public function create()
     {
+        $tal = Talent::all();
         return view('dashboard.form-albumAdd', [
             "title" => "Info Album"
-        ]);
+        ], compact('tal'));
+        
     }
 
     public function store(Request $request)
@@ -48,16 +51,18 @@ class AlbumController extends Controller
 
         $this->validate($request, [
             'title' => 'required|string|max:155',
-            'artist' => 'required',
+            'talent_id' => 'required',
             'description' => 'required'
         ]);
 
         $album = Album::create([
             'title' => $request->title,
-            'artist' => $request->artist,
+            'talent_id' => $request->talent_id,
             'description' => $request->description,
             'slug' => Str::slug($request->title)
         ]);
+
+        // dd($request);
 
         if ($album) {
             return redirect()

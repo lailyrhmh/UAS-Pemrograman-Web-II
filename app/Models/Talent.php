@@ -20,6 +20,11 @@ class Talent extends Model
         return $this->hasMany(Talent::class);
     }
 
+    public function albums()
+    {
+        return $this->hasMany(Album::class);
+    }
+
     public function label()
     {
         return $this->belongsTo(Label::class);

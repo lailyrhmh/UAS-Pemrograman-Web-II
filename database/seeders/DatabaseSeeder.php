@@ -41,6 +41,12 @@ class DatabaseSeeder extends Seeder
             'password' => encrypt('12345')
         ]);
 
+        User::create([
+            'name' => 'Laily Rachmah',
+            'email' => 'lailyrhmh11@gmail.com',
+            'password' => encrypt('password')
+        ]);
+
         Talent::create([
             'label_id' => '2',
             'talent_name' => 'NCT DREAM',
@@ -96,8 +102,9 @@ class DatabaseSeeder extends Seeder
 
         Album::create([
             'id' => 1,
+            'talent_id' => 1,
             'title' => 'Hot Sauce',
-            'artist' => 'Sauce',
+            // 'artist' => 'Sauce',
             'slug' => 'album-hot-sauce',
             'description' => 'NCT DREAM 1st Full Album'
         ]);

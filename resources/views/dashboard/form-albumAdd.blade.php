@@ -19,8 +19,14 @@
                                     placeholder="Input Album Title"></div>
                         </div>
                         <div class="form-group row"><label class="col-sm-2 col-form-label">Artist :</label>
-                            <div class="col-sm-10"><input type="text" name="artist" id="title" class="form-control"
-                                    placeholder="Input Artist"></div>
+                            <div class="col-sm-10" name="talent_id" id="title" class="form-control">
+                                <select class="form-control" >
+                                    <option>Select Artist</option>
+                                    @foreach ($tal as $album)
+                                    <option value="{{ $album->id }}">{{ $album->talent_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group row"><label class="col-sm-2 col-form-label">Description:</label>
                             <div class="col-sm-10">
