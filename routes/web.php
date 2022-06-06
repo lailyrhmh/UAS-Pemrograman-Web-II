@@ -209,6 +209,12 @@ Route::get('/form-trainee', function () {
     ]);
 });
 
+Route::get('/form-imageAdd', function () {
+    return view('dashboard.form-imageAdd', [
+        "title" => "form_imageAdd"
+    ]);
+});
+
 //test
 
 Route::get('/test', function () {
