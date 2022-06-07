@@ -35,17 +35,17 @@ class DatabaseSeeder extends Seeder
             'password' => encrypt('ayangneysa')
         ]);
         
-        User::create([
-            'name' => 'Neysa Nisrina',
-            'email' => 'neysa.nisrina@gmail.com',
-            'password' => encrypt('12345')
-        ]);
+        // User::create([
+        //     'name' => 'Neysa Nisrina',
+        //     'email' => 'neysa.nisrina@gmail.com',
+        //     'password' => encrypt('12345')
+        // ]);
 
-        User::create([
-            'name' => 'Laily Rachmah',
-            'email' => 'lailyrhmh11@gmail.com',
-            'password' => encrypt('password')
-        ]);
+        // User::create([
+        //     'name' => 'Laily Rachmah',
+        //     'email' => 'lailyrhmh11@gmail.com',
+        //     'password' => encrypt('password')
+        // ]);
 
         Talent::create([
             'label_id' => '2',

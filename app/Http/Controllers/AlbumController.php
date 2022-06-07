@@ -84,15 +84,15 @@ class AlbumController extends Controller
     }
 
     // --------------------------- Read --------------------------------
-    public function showAdmin(Album $album)
-    {
-        // $albums = Album::find($album);
-        $albums = Album::with('talent');
-        return view('dashboard.detail-album', [
-            "title" => "Info Album",
-            "album" => $album
-        ], compact('albums'));
-    }
+    // public function showAdmin($id)
+    // {
+    //     // $albums = Album::find($album);
+    //     $albums = Album::with('talent');
+    //     return view('dashboard.detail-album', [
+    //         "title" => "Info Album",
+    //         "album" => $id
+    //     ], compact('albums'));
+    // }
     // --------------------------- Edit --------------------------------
     public function edit($id)
     {
