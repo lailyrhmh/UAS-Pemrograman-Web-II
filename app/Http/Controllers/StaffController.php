@@ -27,10 +27,11 @@ class StaffController extends Controller
 
     public function show(Staff $staff)
     {
+        $staffs = Staff::with('label');
         return view('staff', [
             "title" => "Info Staff",
             "staff" => $staff
-        ]);
+        ], compact('staffs'));
     }
 
     public function create()
