@@ -12,6 +12,7 @@ use App\Http\Controllers\StaffController;
 use App\Http\Controllers\TalentController;
 use App\Http\Controllers\TraineeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
 
 
 
@@ -90,6 +91,9 @@ Route::resource('label', LabelController::class);
 
 // Image Admin
 Route::resource('image', ImageController::class);
+
+// Dashbpard Admin
+// Route::resource('dashboard', DashboardController::class);
 
 
 
@@ -194,11 +198,11 @@ Route::get('/form-album', function () {
 //     ]);
 // });
 
-Route::get('/form-imageAdd', function () {
-    return view('dashboard.form-imageAdd', [
-        "title" => "form-imageAdd"
-    ]);
-});
+// Route::get('/form-imageAdd', function () {
+//     return view('dashboard.form-imageAdd', [
+//         "title" => "form-imageAdd"
+//     ]);
+// });
 
 //test
 

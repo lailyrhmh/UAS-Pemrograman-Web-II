@@ -8,10 +8,9 @@
                 <div class="vertical-timeline-icon navy-bg">
                     <i class="fa fa-dot-circle-o"></i>
                 </div>
-
                 <div class="vertical-timeline-content">
                     <h2>Album</h2>
-                    <p>Here are all albums in total
+                    <p>Here are all albums in total: 
                     </p>
                     <a href="#" class="btn btn-sm btn-primary"></i> More info</a>
                     <span class="vertical-date">

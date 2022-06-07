@@ -48,7 +48,7 @@
                                     <h2 class="font-bold m-b-xs">
                                     {{ $talent->talent_name  }}
                                     </h2>
-                                    <small>{{ $talent->label_id}}</small>
+                                    <small>{{ $talent->label->label_name}}</small>
                                     <hr>
 
                                     <h4>Product description</h4>
@@ -67,7 +67,7 @@
                                         <dt>Release Date</dt>
                                         <dd>dd/mm/yy</dd>
                                         <dt>Label</dt>
-                                        <dd>Artist Agency</dd>
+                                        <dd>{{ $talent->label->label_name }}</dd>
                                         <dt>Song List</dt>
                                         <dd>- 
                                             -

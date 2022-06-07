@@ -9,21 +9,22 @@
     <div class="tab-content">
         <div id="tab-1" class="tab-pane active">
             <div class="panel-body">
-                <fieldset>
-                    <div class="input-group row"><label class="col-sm-2 col-form-label">Image:</label>
-                        <div class="custom-file">
-                            <input id="inputGroupFile01" type="file" class="custom-file-input">
-                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                <form action="{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                    <div class="input-group row" ><label class="col-sm-2 col-form-label">Image:</label>
+                        <div class="fallback">
+                            <input id="image" name="image" type="file" multiple>
+                            <!-- <label class="custom-file-label" for="image">Choose file</label> -->
                         </div>
                     </div>
                     <div class="hr-line-dashed"></div>
                     <div class="form-group row">
                         <div class="col-sm-4 col-sm-offset-2">
-                            <button class="btn btn-white btn-sm" type="submit">Cancel</button>
+                            <a href="{{ route('album.create') }}" class="btn btn-white btn-sm" type="submit">Cancel</a>
                             <button class="btn btn-primary btn-sm" type="submit">Save changes</button>
                         </div>
                     </div>
-                </fieldset>
+                </form>
             </div>
         </div>
     </div>
