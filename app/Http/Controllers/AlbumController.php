@@ -30,10 +30,12 @@ class AlbumController extends Controller
 
     public function show(Album $album)
     {
+        // $albums = Album::find($album);
+        $albums = Album::with('talent');
         return view('album', [
             "title" => "Info Album",
             "album" => $album
-        ]);
+        ], compact('albums'));
     }
 
     public function create()

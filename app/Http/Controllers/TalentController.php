@@ -30,10 +30,11 @@ class TalentController extends Controller
 
     public function show(Talent $talent)
     {
+        $talents = Talent::with('label');
         return view('talent', [
             "title" => "Info Talent",
             "talent" => $talent
-        ]);
+        ], compact('talents'));
     }
 
     public function create()

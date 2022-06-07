@@ -46,9 +46,9 @@
                                 <div class="col-md-7">
 
                                     <h2 class="font-bold m-b-xs">
-                                    {{ $album->album_name  }}
+                                    {{ $album->title  }}
                                     </h2>
-                                    <small>{{ $album->album_desc}}</small>
+                                    <small>{{ $album->description}}</small>
                                     <hr>
 
                                     <h4>Product description</h4>
@@ -66,8 +66,8 @@
                                     <dl class="large m-t-md">
                                         <dt>Release Date</dt>
                                         <dd>dd/mm/yy</dd>
-                                        <dt>Label</dt>
-                                        <dd>Artist Agency</dd>
+                                        <dt>Talent</dt>
+                                        <dd>{{ $album->talent->talent_name }}</dd>
                                         <dt>Song List</dt>
                                         <dd>- 
                                             -
