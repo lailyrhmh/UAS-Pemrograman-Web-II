@@ -82,6 +82,17 @@ class AlbumController extends Controller
                 ]);
         }
     }
+
+    // --------------------------- Read --------------------------------
+    public function showAdmin(Album $album)
+    {
+        // $albums = Album::find($album);
+        $albums = Album::with('talent');
+        return view('dashboard.detail-album', [
+            "title" => "Info Album",
+            "album" => $album
+        ], compact('albums'));
+    }
     // --------------------------- Edit --------------------------------
     public function edit($id)
     {

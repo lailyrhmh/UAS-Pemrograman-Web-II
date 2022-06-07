@@ -75,18 +75,21 @@ class DatabaseSeeder extends Seeder
         Staff::create([
             'label_id' => '2',
             'staff_name' => 'Milan',
+            'slug' => 'milan',
             'division' => 'CEO'
         ]);
 
         Staff::create([
             'label_id' => '1',
             'staff_name' => 'Alea',
+            'slug' => 'alea',
             'division' => 'CEO'
         ]);
 
         Staff::create([
             'label_id' => '1',
-            'staff_name' => 'Alea',
+            'staff_name' => 'Ralea',
+            'slug' => 'ralea',
             'division' => 'CO-Director'
         ]);
 

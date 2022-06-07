@@ -29,7 +29,7 @@
     
     
                                     <div class="small m-t-xs">
-                                        {{ $talent->label_id }}
+                                        {{ $talent->label->label_name }}
                                     </div>
                                     <div class="m-t text-righ">
     

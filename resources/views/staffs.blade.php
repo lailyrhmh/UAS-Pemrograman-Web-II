@@ -24,12 +24,12 @@
                                     <span class="product-price">
                                         $10
                                     </span>
-                                    <a href="/staffss/{{ $staff->slug }}" class="product-name">  {{ $staff->staff_name  }}</a>
+                                    <a href="/staffs/{{ $staff->slug }}" class="product-name">  {{ $staff->staff_name  }}</a>
     
     
     
                                     <div class="small m-t-xs">
-                                        {{ $staff->label_id }}
+                                        {{ $staff->label->label_name }}
                                     </div>
                                     <div class="m-t text-righ">
     
