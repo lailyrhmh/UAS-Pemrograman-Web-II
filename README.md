@@ -19,3 +19,5 @@ How to run in local:
 - Run `php artisan migrate:fresh --seed`
 - Run `php artisan serve`
 - Go to http://localhost:8000/
+
+This website was created to fulfill the final exam of web programming semester II using the laravel framework (https://laravel.com/) as well as the boostrap template from inspinia (https://wrapbootstrap.com/theme/inspinia-responsive-admin-template-WB0R5L90S)
